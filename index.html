@@ -2652,8 +2652,8 @@ const DATA = {
     },
     {
       no: "P14",
-      kat: "copywriting",
-      katlabel: "Copywriting",
+      kat: "news",
+      katlabel: "News",
       judul: "Berita Utuh dari Draf Kasar (Gaya Kompas.com)",
       use: "Catatan kasar atau bahan wawancara jadi berita siap tayang 380+ kata.",
       brief: "Dipakai ketika bahan dari lapangan masih berupa poin-poin, voice note, atau draf mentah yang harus disusun menjadi berita utuh sebelum publikasi.",
@@ -2827,6 +2827,7 @@ function renderCategoryTabs() {
 
   const categories = [
     { id: 'all', label: 'Semua', count: DATA.prompts.length },
+    { id: 'news', label: 'News', count: DATA.prompts.filter(p => p.kat === 'news').length },
     { id: 'copywriting', label: 'Copywriting', count: DATA.prompts.filter(p => p.kat === 'copywriting').length },
     { id: 'visual', label: 'Brief Visual', count: DATA.prompts.filter(p => p.kat === 'visual').length },
     { id: 'repurposing', label: 'Repurposing', count: DATA.prompts.filter(p => p.kat === 'repurposing').length },
