@@ -1,0 +1,3417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<title>Humas New Era — Birokrasi Rasa Agensi | Kanwil Kemenhaj Sumbar</title>
+<meta name="description" content="Aplikasi Humas New Era: Suite Produktivitas & Prompt AI PANDU untuk Kehumasan Kanwil Kemenhaj Sumatera Barat. Formula PANDU, 13 Prompt Siap Salin, Studio Repurposing, Scanner Rambu, dan Rencana 7 Hari.">
+<meta name="theme-color" content="#0B0C10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<style>
+/* ==========================================================================
+   PALET WARNA HITAM + EMAS (LUXURY OBSIDIAN & IMPERIAL GOLD)
+   ========================================================================== */
+:root {
+  --bg-deep: #08090B;
+  --bg-main: #0E0F14;
+  --bg-surface: #14151C;
+  --bg-card: #191B24;
+  --bg-card-hover: #212330;
+  --bg-input: #12131A;
+  
+  --line-dim: rgba(212, 175, 55, 0.14);
+  --line-gold: rgba(212, 175, 55, 0.35);
+  --line-bright: rgba(243, 229, 171, 0.65);
+  --line-base: #262835;
+
+  --gold-primary: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-glow: #F6E27A;
+  --gold-bronze: #A67C1E;
+  --gold-soft: rgba(212, 175, 55, 0.12);
+  --gold-badge: rgba(212, 175, 55, 0.18);
+  
+  --txt-white: #FFFFFF;
+  --txt-main: #EFECE6;
+  --txt-muted: #A39E93;
+  --txt-dim: #787368;
+
+  --red-alert: #E56857;
+  --red-bg: rgba(229, 104, 87, 0.12);
+  --red-border: rgba(229, 104, 87, 0.4);
+
+  --green-ok: #63B978;
+  --green-bg: rgba(99, 185, 120, 0.12);
+  --green-border: rgba(99, 185, 120, 0.4);
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, Monaco, "Courier New", monospace;
+
+  --shadow-gold: 0 4px 20px -2px rgba(212, 175, 55, 0.15);
+  --shadow-gold-lg: 0 10px 32px -4px rgba(212, 175, 55, 0.25);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.55);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  
+  --nav-height: 70px;
+  --mobile-nav-height: 64px;
+}
+
+/* RESET & BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-deep);
+  color: var(--txt-main);
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(1200px 650px at 85% -10%, rgba(212, 175, 55, 0.13), transparent 60%),
+    radial-gradient(850px 500px at -10% 25%, rgba(212, 175, 55, 0.07), transparent 55%),
+    radial-gradient(900px 700px at 50% 90%, rgba(212, 175, 55, 0.05), transparent 60%);
+  background-attachment: fixed;
+  color: var(--txt-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-serif);
+  color: var(--txt-white);
+  letter-spacing: 0.2px;
+  line-height: 1.25;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-light) 45%, var(--gold-primary) 85%, var(--gold-bronze) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+p {
+  color: var(--txt-muted);
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: var(--gold-glow);
+}
+
+/* LAYOUT CONTAINER */
+.app-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+  flex: 1;
+}
+
+/* APP HEADER (DESKTOP & MOBILE) */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(14, 15, 20, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line-dim);
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2A2412 0%, #15161B 100%);
+  border: 1.5px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.25);
+  flex-shrink: 0;
+}
+
+.brand-logo svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--gold-light);
+}
+
+.brand-text h1 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-text p {
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  margin-top: 1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* NAV TABS (DESKTOP) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--line-dim);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: var(--txt-muted);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.nav-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.nav-item:hover {
+  color: var(--txt-white);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.12) 100%);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+}
+
+/* ACTION BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-base);
+  background: var(--bg-card);
+  color: var(--txt-main);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--txt-white);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #ECCB65 0%, var(--gold-primary) 60%, #9D771B 100%);
+  color: #0B0B0D;
+  border: 1px solid rgba(255, 235, 160, 0.6);
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.28);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #F8DB7E 0%, #DDB842 60%, #AB8323 100%);
+  color: #000;
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.42);
+  border-color: #FFF;
+}
+
+.btn-gold-outline {
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--gold-light);
+  background: var(--gold-soft);
+}
+.btn-gold-outline:hover {
+  background: rgba(212, 175, 55, 0.22);
+  border-color: var(--gold-primary);
+  color: #FFF;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+/* BADGES & CHIPS */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-dim);
+  background: var(--bg-surface);
+  color: var(--txt-muted);
+}
+
+.badge-gold {
+  border-color: rgba(212, 175, 55, 0.4);
+  background: var(--gold-badge);
+  color: var(--gold-light);
+}
+
+.badge-red {
+  border-color: var(--red-border);
+  background: var(--red-bg);
+  color: var(--red-alert);
+}
+
+.badge-green {
+  border-color: var(--green-border);
+  background: var(--green-bg);
+  color: var(--green-ok);
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--line-dim);
+  position: relative;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+
+.hero-pill span.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  box-shadow: 0 0 8px var(--gold-primary);
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.hero-desc {
+  font-size: clamp(0.96rem, 2vw, 1.15rem);
+  color: var(--txt-muted);
+  max-width: 860px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+/* STATS ROW */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold-primary), transparent);
+  opacity: 0.7;
+}
+
+.stat-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-2px);
+  background: var(--bg-card-hover);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gold-soft);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  flex-shrink: 0;
+}
+
+.stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--txt-white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--txt-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 4px;
+}
+
+/* SECTIONS WRAPPER */
+.app-view {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.app-view.active-view {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-head {
+  padding: 32px 0 18px;
+}
+
+.section-eyebrow {
+  font-size: 0.74rem;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
+  font-weight: 700;
+  margin: 6px 0 6px;
+  color: #FFF;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--txt-muted);
+  max-width: 820px;
+}
+
+/* PANDU FORMULA CARDS */
+.pandu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.pandu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  position: relative;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pandu-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.pandu-card-letter {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-shadow: 0 0 18px rgba(212, 175, 55, 0.4);
+}
+
+.pandu-card-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 4px;
+}
+
+.pandu-card-q {
+  font-size: 0.84rem;
+  color: var(--txt-muted);
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.pandu-card-ex {
+  background: var(--bg-surface);
+  border: 1px dashed var(--line-dim);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  color: var(--txt-main);
+  line-height: 1.5;
+}
+
+.pandu-card-ex b {
+  color: var(--gold-light);
+}
+
+/* REM BOX (CRITICAL GUARDRAIL) */
+.rem-box {
+  margin-top: 24px;
+  background: linear-gradient(135deg, rgba(229, 104, 87, 0.15) 0%, rgba(20, 21, 28, 0.95) 100%);
+  border: 1.5px solid var(--red-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rem-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red-alert);
+}
+
+.rem-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  color: #FFF;
+  line-height: 1.45;
+  background: rgba(0, 0, 0, 0.35);
+  border-left: 3px solid var(--red-alert);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 10px 0;
+}
+
+.rem-why {
+  font-size: 0.86rem;
+  color: var(--txt-muted);
+  line-height: 1.6;
+}
+
+/* PROMPT SEARCH & TOOLBAR */
+.prompt-toolbar {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cat-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--line-base);
+  color: var(--txt-muted);
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cat-btn:hover {
+  color: #FFF;
+  border-color: var(--line-gold);
+}
+
+.cat-btn.active {
+  background: var(--gold-soft);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+.search-input-wrap {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--txt-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--line-base);
+  border-radius: var(--radius-sm);
+  padding: 9px 14px 9px 36px;
+  color: #FFF;
+  font-size: 0.88rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.prompt-count-badge {
+  font-size: 0.8rem;
+  color: var(--txt-muted);
+  white-space: nowrap;
+}
+
+/* PROMPT ACCORDION CARDS */
+.prompt-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.prompt-card:hover {
+  border-color: var(--line-gold);
+}
+
+.prompt-card.expanded {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: var(--shadow-card);
+}
+
+.prompt-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prompt-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.prompt-no-badge {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  min-width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prompt-title-wrap {
+  min-width: 0;
+}
+
+.prompt-title-wrap h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt-title-wrap p {
+  font-size: 0.82rem;
+  color: var(--txt-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.fav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--txt-dim);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.fav-btn:hover, .fav-btn.active {
+  color: var(--gold-glow);
+  transform: scale(1.15);
+}
+
+.expand-chevron {
+  color: var(--txt-muted);
+  transition: transform 0.25s ease;
+}
+
+.prompt-card.expanded .expand-chevron {
+  transform: rotate(180deg);
+  color: var(--gold-light);
+}
+
+.prompt-body {
+  display: none;
+  padding: 0 20px 20px;
+  border-top: 1px solid var(--line-dim);
+  background: var(--bg-surface);
+}
+
+.prompt-card.expanded .prompt-body {
+  display: block;
+}
+
+.prompt-brief-box {
+  margin: 16px 0 12px;
+  font-size: 0.86rem;
+  color: var(--txt-muted);
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--gold-primary);
+}
+
+.prompt-brief-box b {
+  color: var(--gold-light);
+}
+
+.prompt-code-wrap {
+  position: relative;
+  margin: 14px 0;
+}
+
+.prompt-code {
+  background: #0C0D12;
+  border: 1px solid var(--line-base);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--txt-main);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.65;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.prompt-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line-dim);
+}
+
+.prompt-tip {
+  font-size: 0.82rem;
+  color: var(--txt-muted);
+  max-width: 600px;
+}
+
+.prompt-tip b {
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   REPURPOSING STUDIO (THE MAGIC TRICK P09 INTERACTIVE GENERATOR)
+   ========================================================================== */
+.studio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.studio-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--txt-white);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.form-label span.req {
+  color: var(--red-alert);
+}
+
+.form-label small {
+  font-weight: 400;
+  color: var(--txt-muted);
+  font-size: 0.78rem;
+  margin-left: 6px;
+}
+
+.form-control, .form-textarea, .form-select {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--line-base);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-textarea:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+  background: #151620;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.check-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-base);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  color: var(--txt-main);
+  transition: all 0.2s ease;
+}
+
+.check-item:hover {
+  border-color: var(--line-gold);
+}
+
+.check-item input[type="checkbox"] {
+  accent-color: var(--gold-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.studio-output-box {
+  background: #0B0C11;
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-dim);
+}
+
+.output-content {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--txt-main);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+  overflow-y: auto;
+  max-height: 520px;
+}
+
+/* ==========================================================================
+   RAMBU & SCANNER KEAMANAN KONTEN
+   ========================================================================== */
+.rambu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.rambu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.rambu-card:hover {
+  border-color: var(--red-border);
+  background: var(--bg-card-hover);
+}
+
+.rambu-num {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--red-alert);
+  line-height: 1;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.rambu-info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.rambu-info p {
+  font-size: 0.85rem;
+  color: var(--txt-muted);
+  line-height: 1.55;
+}
+
+/* SCANNER BOX */
+.scanner-container {
+  margin-top: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-card);
+}
+
+.scanner-results {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--line-dim);
+  display: none;
+}
+
+.scanner-results.active {
+  display: block;
+}
+
+.threat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.threat-item.danger {
+  background: var(--red-bg);
+  border: 1px solid var(--red-border);
+  color: #FFF;
+}
+
+.threat-item.warning {
+  background: rgba(243, 229, 171, 0.08);
+  border: 1px solid rgba(243, 229, 171, 0.35);
+  color: var(--gold-light);
+}
+
+.threat-item.safe {
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  color: #FFF;
+}
+
+/* ==========================================================================
+   CORONG KONTEN & TEMPLATE KIT
+   ========================================================================== */
+.funnel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.funnel-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.funnel-lvl-tag {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.funnel-card h3 {
+  font-size: 1.25rem;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.funnel-goal {
+  font-size: 0.85rem;
+  color: var(--txt-muted);
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.funnel-fmt {
+  font-size: 0.82rem;
+  color: var(--txt-main);
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+.funnel-fmt b {
+  color: var(--gold-light);
+}
+
+.funnel-exm {
+  font-size: 0.8rem;
+  color: var(--txt-muted);
+  border-top: 1px dashed var(--line-dim);
+  padding-top: 10px;
+  font-style: italic;
+}
+
+/* TEMPLATE KIT CARDS */
+.kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.kit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.kit-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-2px);
+}
+
+.kit-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kit-card p {
+  font-size: 0.85rem;
+  color: var(--txt-muted);
+  line-height: 1.5;
+}
+
+/* METRIKS */
+.metrik-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.metrik-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.metrik-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.metrik-how {
+  font-size: 0.84rem;
+  color: var(--txt-main);
+  margin-bottom: 10px;
+}
+
+.metrik-tgt {
+  font-size: 0.78rem;
+  color: var(--txt-muted);
+  border-top: 1px dashed var(--line-dim);
+  padding-top: 8px;
+}
+
+/* ==========================================================================
+   RENCANA 7 HARI (INTERACTIVE CHECKLIST)
+   ========================================================================== */
+.plan-progress-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.progress-stat {
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.progress-track {
+  height: 10px;
+  background: var(--bg-deep);
+  border: 1px solid var(--line-base);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-bronze) 0%, var(--gold-primary) 50%, var(--gold-light) 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-task-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-dim);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.check-task-card:hover {
+  border-color: var(--line-gold);
+  background: var(--bg-card-hover);
+}
+
+.check-task-card.completed {
+  border-color: var(--green-border);
+  background: linear-gradient(90deg, rgba(99, 185, 120, 0.08) 0%, rgba(20, 21, 28, 0.9) 100%);
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 7px;
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 800;
+  font-size: 14px;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.check-task-card.completed .custom-checkbox {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-day {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 4px;
+}
+
+.check-task-card.completed .task-title {
+  text-decoration: line-through;
+  color: var(--txt-muted);
+}
+
+.task-deliverable {
+  font-size: 0.82rem;
+  color: var(--txt-muted);
+}
+
+/* ==========================================================================
+   MODAL / POPUP INTERAKTIF UNTUK EDIT PROMPT
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-dialog {
+  background: var(--bg-card);
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-lg);
+  max-width: 820px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScale {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line-dim);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+}
+
+.modal-header h3 {
+  font-size: 1.15rem;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--txt-muted);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  border-radius: 8px;
+}
+.modal-close:hover {
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--line-dim);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background: var(--bg-surface);
+}
+
+/* TOAST NOTIFICATION */
+.toast-container {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  background: #14151E;
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  color: #FFF;
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideToast 0.3s ease forwards;
+  pointer-events: auto;
+}
+
+.toast.toast-success {
+  border-color: var(--gold-primary);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), #14151E);
+}
+
+.toast svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-light);
+  flex-shrink: 0;
+}
+
+@keyframes slideToast {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+.app-footer {
+  border-top: 1px solid var(--line-dim);
+  padding: 34px 20px 48px;
+  margin-top: 50px;
+  background: rgba(10, 11, 16, 0.95);
+  font-size: 0.84rem;
+  color: var(--txt-muted);
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-col-main {
+  max-width: 580px;
+}
+
+.footer-col-main b {
+  color: var(--gold-light);
+}
+
+/* MOBILE BOTTOM NAVIGATION BAR */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--mobile-nav-height);
+  background: rgba(14, 15, 20, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--line-dim);
+  z-index: 500;
+  padding: 0 8px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.mobile-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100%;
+  align-items: center;
+}
+
+.mobile-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--txt-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 2px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.mobile-nav-btn.active {
+  color: var(--gold-light);
+}
+
+.mobile-nav-btn.active svg {
+  stroke: var(--gold-light);
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 860px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-bottom-nav {
+    display: block;
+  }
+
+  .app-container {
+    padding-bottom: 110px;
+  }
+
+  .toast-container {
+    bottom: 80px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .header-actions .btn-text-hide {
+    display: none;
+  }
+
+  .stat-card {
+    padding: 12px 16px;
+  }
+
+  .stat-val {
+    font-size: 1.35rem;
+  }
+
+  .hero-section {
+    padding: 24px 0 20px;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  body {
+    background: #FFF !important;
+    color: #111 !important;
+  }
+  .app-header, .mobile-bottom-nav, .prompt-toolbar, .toast-container, .btn, .fav-btn {
+    display: none !important;
+  }
+  .app-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .app-view {
+    display: block !important;
+  }
+  .prompt-card {
+    border: 1px solid #CCC !important;
+    page-break-inside: avoid;
+    margin-bottom: 16px;
+  }
+  .prompt-body {
+    display: block !important;
+  }
+  .prompt-code {
+    background: #F8F8F8 !important;
+    color: #111 !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- APP HEADER -->
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand-wrap">
+      <div class="brand-logo" title="Humas Kanwil Kemenhaj Sumbar">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1 class="serif">Humas <span class="gold-gradient-text">New Era</span></h1>
+        <p>Birokrasi Rasa Agensi · Kanwil Kemenhaj Sumbar</p>
+      </div>
+    </div>
+
+    <!-- DESKTOP TOP NAVIGATION -->
+    <nav class="desktop-nav" id="desktopNav">
+      <button class="nav-item active" data-view="beranda">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Beranda
+      </button>
+      <button class="nav-item" data-view="prompts">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Prompt PANDU
+      </button>
+      <button class="nav-item" data-view="studio">
+        <svg viewBox="0 0 24 24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Studio Repurposing
+      </button>
+      <button class="nav-item" data-view="rambu">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Rambu & Scanner
+      </button>
+      <button class="nav-item" data-view="corong">
+        <svg viewBox="0 0 24 24" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+        Corong & Kit
+      </button>
+      <button class="nav-item" data-view="rencana">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Rencana 7 Hari
+      </button>
+    </nav>
+
+    <!-- HEADER QUICK ACTIONS -->
+    <div class="header-actions">
+      <button class="btn btn-gold-outline btn-sm" id="btnSalinSemua" title="Salin 13 Perintah Lengkap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="btn-text-hide">Salin Semua</span>
+      </button>
+      <button class="btn btn-sm" id="btnCetakPDF" title="Cetak atau Simpan PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span class="btn-text-hide">Cetak</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN APPLICATION CONTAINER -->
+<main class="app-container">
+
+  <!-- =========================================================================
+       VIEW 1: BERANDA (EXECUTIVE DASHBOARD)
+       ========================================================================= -->
+  <section class="app-view active-view" id="view-beranda">
+    <div class="hero-section">
+      <h1 class="hero-title serif">
+        Birokrasi Rasa Agensi:<br>
+        <span class="gold-gradient-text">Suite Kehumasan Cerdas & Terukur</span>
+      </h1>
+      <p class="hero-desc">
+        Transformasi kerja humas dari rilis kaku menjadi orkestrasi konten multi-kanal berkualitas tinggi. Dilengkapi 13 formula prompt PANDU siap pakai, sistem repurposing otomatis, scanner rambu etika, serta pelacak rencana aksi 7 hari.
+      </p>
+
+      <!-- STATS GRID -->
+      <div class="stats-grid">
+        <div class="stat-card" style="cursor:pointer" onclick="switchView('prompts')">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div>
+            <div class="stat-val">13</div>
+            <div class="stat-label">Prompt PANDU Siap Pakai</div>
+          </div>
+        </div>
+
+        <div class="stat-card" style="cursor:pointer" onclick="switchView('studio')">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <div class="stat-val">1 : 5</div>
+            <div class="stat-label">The Magic Trick Repurpose</div>
+          </div>
+        </div>
+
+        <div class="stat-card" style="cursor:pointer" onclick="switchView('corong')">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div>
+            <div class="stat-val">6</div>
+            <div class="stat-label">Template Visual Baku</div>
+          </div>
+        </div>
+
+        <div class="stat-card" style="cursor:pointer" onclick="switchView('rencana')">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="stat-val" id="homeProgressTxt">0 / 7</div>
+            <div class="stat-label">Rencana 7 Hari Selesai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULA PANDU SECTION -->
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>01 · FORMULA INTI</span>
+      </div>
+      <h2 class="section-title">PANDU — Kerangka Perintah Anti-Gagal</h2>
+      <p class="section-subtitle">
+        Semua perintah AI di aplikasi ini disusun di atas lima fondasi utama. Jika hasil AI mengecewakan, periksa apakah ada unsur yang terlewat.
+      </p>
+    </div>
+
+    <div class="pandu-grid" id="panduCardList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- KALIMAT REM SAFETY BOX -->
+    <div class="rem-box">
+      <div class="rem-header">
+        <div class="rem-tag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Kalimat Rem — Pasang di Akhir Setiap Prompt
+        </div>
+        <button class="btn btn-sm btn-gold-outline" onclick="copyText('Jangan mengarang. Jika data tidak saya berikan, tulis [NANTI DIISI] dan tanyakan kepada saya.', this)">
+          Salin Kalimat Rem
+        </button>
+      </div>
+      <div class="rem-quote">
+        “Jangan mengarang. Jika data tidak saya berikan, tulis [NANTI DIISI] dan tanyakan kepada saya.”
+      </div>
+      <p class="rem-why">
+        <b>Mengapa wajib?</b> Satu kalimat ini menutup 95% kesalahan fatal AI: kuota haji palsu, rincian biaya fiktif, tanggal pelunasan yang meleset, dan nama pejabat salah. Tanpa kalimat ini, AI akan mengisi kekosongan informasi dengan data yang terkesan meyakinkan padahal halusinasi.
+      </p>
+    </div>
+
+    <!-- QUICK CALL-TO-ACTION CARDS -->
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 28px;">
+      <div class="kit-card" style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(25,27,36,0.9)); border-color: rgba(212,175,55,0.4);">
+        <h4>Studio Repurposing 1 ke 5 <span class="badge badge-gold">The Magic Trick</span></h4>
+        <p>Punya rilis berita resmi? Tempel di Studio untuk langsung menghasilkan naskah Reels, utas X, carousel 4 slide, caption FB, dan siaran WA sekaligus!</p>
+        <button class="btn btn-gold btn-sm" style="margin-top:14px;" onclick="switchView('studio')">Buka Studio Repurposing &rarr;</button>
+      </div>
+      <div class="kit-card" style="background: linear-gradient(135deg, rgba(229,104,87,0.12), rgba(25,27,36,0.9)); border-color: rgba(229,104,87,0.4);">
+        <h4>Scanner Rambu Kehumasan <span class="badge badge-red">Pre-Flight Check</span></h4>
+        <p>Sebelum mengunggah draf konten ke media sosial, uji apakah memuat kata birokratis tabu, janji layanan berbahaya, atau potensi kebocoran data jemaah.</p>
+        <button class="btn btn-sm" style="margin-top:14px; border-color:var(--red-border); color:var(--red-alert);" onclick="switchView('rambu')">Cek Rambu & Scanner &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIEW 2: KATALOG 13 PROMPT PANDU
+       ========================================================================= -->
+  <section class="app-view" id="view-prompts">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>02 · PERPUSTAKAAN PERINTAH</span>
+      </div>
+      <h2 class="section-title">Tiga Belas Perintah PANDU Siap Pakai</h2>
+      <p class="section-subtitle">
+        Cari dengan kata kunci, saring berdasarkan kategori, atau gunakan tombol <b>Isi & Sesuaikan</b> untuk mengisi placeholder secara interaktif sebelum disalin.
+      </p>
+    </div>
+
+    <!-- TOOLBAR SEARCH & FILTER -->
+    <div class="prompt-toolbar">
+      <div class="category-tabs" id="categoryTabs">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" class="search-input" id="promptSearchInput" placeholder="Cari prompt: reels, carousel, tiktok, pengaduan...">
+      </div>
+      <div class="prompt-count-badge" id="promptCountText">Menampilkan 13 prompt</div>
+      <button class="btn btn-sm" id="btnToggleAllPrompts" style="margin-left:auto;">Buka Semua</button>
+    </div>
+
+    <!-- PROMPT ACCORDION LIST -->
+    <div id="promptsAccordionList">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIEW 3: STUDIO REPURPOSING (THE MAGIC TRICK P09 GENERATOR)
+       ========================================================================= -->
+  <section class="app-view" id="view-studio">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>03 · STUDIO PRODUKSI TERPADU</span>
+      </div>
+      <h2 class="section-title">The Magic Trick: Satu Rilis Jadi Lima Konten</h2>
+      <p class="section-subtitle">
+        Fitur otomasi penyusun prompt P09. Masukkan data rilis berita atau kegiatan Kanwil, pilih format target, lalu biarkan sistem menyusun instruksi PANDU terlengkap untuk AI.
+      </p>
+    </div>
+
+    <div class="studio-grid">
+      <!-- INPUT PANEL -->
+      <div class="studio-panel">
+        <h3 class="serif" style="margin-bottom:18px; font-size:1.25rem; color:#FFF; display:flex; align-items:center; gap:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Formulir Bahan Rilis Berita
+        </h3>
+
+        <div class="form-group">
+          <label class="form-label">Judul Rilis Berita <span class="req">*</span></label>
+          <input type="text" class="form-control" id="studioJudul" placeholder="Contoh: Kemenhaj Sumbar Buka Pelunasan BPIH Tahap Pertama, Kuota 4.613 Jemaah">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Isi Rilis Berita Lengkap <span class="req">*</span> <small>(Badan berita utuh, tanggal, data resmi)</small></label>
+          <textarea class="form-textarea" id="studioIsi" placeholder="Tempelkan isi siaran pers resmi di sini. Pastikan angka kuota, jadwal, dan dasar aturan tercantum lengkap..."></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label class="form-label">Tanggal & Lokasi Kegiatan</label>
+            <input type="text" class="form-control" id="studioTanggal" placeholder="Contoh: Padang, 16 Oktober 2026">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kanal Resmi / Narahubung</label>
+            <input type="text" class="form-control" id="studioKanal" placeholder="Contoh: WA 0811-xxxx, sumbar.kemenhaj.go.id">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Target Audiens Utama</label>
+          <select class="form-select" id="studioAudiens">
+            <option value="Calon jemaah haji usia 45-65 tahun dan pendamping keluarga di Sumatera Barat">Calon Jemaah Haji Usia 45-65 Tahun & Keluarga</option>
+            <option value="Masyarakat umum dan pendaftar umrah muda di Sumatera Barat">Masyarakat Umum & Jemaah Umrah Mandiri</option>
+            <option value="Pengelola travel PPIU, KBIHU, dan pimpinan ormas keagamaan">Travel PPIU / KBIHU & Mitra Kerja</option>
+            <option value="Jemaah lansia yang membutuhkan kepastian alur layanan">Jemaah Lansia & Pendamping Khusus</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Keluaran Konten yang Diinginkan</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="checkbox" id="chkReels" checked> Script Reels 45 Detik</label>
+            <label class="check-item"><input type="checkbox" id="chkX" checked> Utas X (3 Cuitan)</label>
+            <label class="check-item"><input type="checkbox" id="chkCarousel" checked> Infografis 4 Slide</label>
+            <label class="check-item"><input type="checkbox" id="chkFb" checked> Caption Facebook</label>
+            <label class="check-item"><input type="checkbox" id="chkWa" checked> Siaran WhatsApp</label>
+          </div>
+        </div>
+
+        <button class="btn btn-gold" style="width:100%; margin-top:10px;" id="btnGenerateStudio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Susun Prompt Terintegrasi Sekarang
+        </button>
+      </div>
+
+      <!-- OUTPUT PANEL -->
+      <div class="studio-panel">
+        <div class="output-header">
+          <div>
+            <h3 class="serif" style="font-size:1.15rem; color:#FFF;">Prompt PANDU Siap Tempel</h3>
+            <p style="font-size:0.78rem; color:var(--txt-muted);">Salin dan kirim langsung ke ChatGPT, Gemini, atau Claude</p>
+          </div>
+          <button class="btn btn-gold btn-sm" id="btnCopyStudioOutput">Salin Prompt</button>
+        </div>
+
+        <div class="studio-output-box">
+          <div class="output-content" id="studioOutputText">Isi formulir di sebelah kiri dan klik "Susun Prompt Terintegrasi Sekarang" untuk melihat prompt PANDU yang siap pakai...</div>
+        </div>
+
+        <div style="margin-top:14px; font-size:0.8rem; color:var(--txt-muted); display:flex; align-items:center; gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          Sistem otomatis menyematkan <b>Kalimat Rem Pengaman</b> di bagian akhir instruksi.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIEW 4: RAMBU ETIKA & SCANNER
+       ========================================================================= -->
+  <section class="app-view" id="view-rambu">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>04 · RAMBU PUBLIKASI & PENGAWASAN</span>
+      </div>
+      <h2 class="section-title">Yang Tidak Boleh Diserahkan ke AI</h2>
+      <p class="section-subtitle">
+        Enam ranah sensitif ini mutlak membutuhkan verifikasi manusia. Satu kesalahan informasi di media sosial dapat merusak kepercayaan publik dan memicu kepanikan jemaah.
+      </p>
+    </div>
+
+    <!-- 6 RAMBU CARDS -->
+    <div class="rambu-grid" id="rambuGridList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- SCANNER PRE-FLIGHT CHECK -->
+    <div class="scanner-container">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+        <div>
+          <h3 class="serif" style="font-size:1.25rem; color:#FFF; display:flex; align-items:center; gap:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red-alert)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Pre-Flight Scanner: Uji Draf Konten Sebelum Tayang
+          </h3>
+          <p style="font-size:0.84rem; color:var(--txt-muted);">Pendeteksi kata-kata birokratis tabu, klaim layanan berisiko tinggi, dan kebocoran data sensitif.</p>
+        </div>
+        <button class="btn btn-gold btn-sm" id="btnScanDraft">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Pindai Draf Konten
+        </button>
+      </div>
+
+      <textarea class="form-textarea" id="draftScanInput" placeholder="Tempelkan draf caption, naskah video, atau pengumuman yang sudah dibuat AI di sini..."></textarea>
+
+      <!-- RESULTS BOX -->
+      <div class="scanner-results" id="scannerResultsBox">
+        <!-- Results injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIEW 5: CORONG KONTEN & TEMPLATE KIT
+       ========================================================================= -->
+  <section class="app-view" id="view-corong">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>05 · ARSITEKTUR KONTEN</span>
+      </div>
+      <h2 class="section-title">Corong Konten &amp; Enam Template Baku</h2>
+      <p class="section-subtitle">
+        Petakan satu materi sumber menjadi tiga lapisan corong (Jangkau, Pahami, Bertindak) dan manfaatkan template baku agar waktu produksi turun drastis.
+      </p>
+    </div>
+
+    <!-- CORONG MATRIX (TOFU, MOFU, BOFU) -->
+    <h3 class="serif" style="color:#FFF; font-size:1.25rem; margin-bottom:12px;">1. Tiga Lapisan Corong Konten</h3>
+    <div class="funnel-grid" id="funnelGridList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- ENAM TEMPLATE BAKU -->
+    <h3 class="serif" style="color:#FFF; font-size:1.25rem; margin:36px 0 12px;">2. Enam Template Baku Humas Kanwil</h3>
+    <div class="kit-grid" id="kitGridList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- EMPAT UKURAN KERJA -->
+    <h3 class="serif" style="color:#FFF; font-size:1.25rem; margin:36px 0 12px;">3. Empat Angka Metrik Manual</h3>
+    <p class="section-subtitle" style="margin-bottom:16px;">Ambil langsung dari analitik bawaan platform tanpa perlu tools mahal berbayar.</p>
+    <div class="metrik-grid" id="metrikGridList">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIEW 6: RENCANA 7 HARI (INTERACTIVE ACTION TRACKER)
+       ========================================================================= -->
+  <section class="app-view" id="view-rencana">
+    <div class="section-head">
+      <div class="section-eyebrow">
+        <span>06 · IMPLEMENTASI NYATA</span>
+      </div>
+      <h2 class="section-title">Rencana Aksi 7 Hari Humas Kanwil</h2>
+      <p class="section-subtitle">
+        Centang langkah-langkah implementasi ini saat kembali ke kantor. Progres Anda tersimpan aman secara otomatis di perangkat ini.
+      </p>
+    </div>
+
+    <!-- PROGRESS PANEL -->
+    <div class="plan-progress-panel">
+      <div class="progress-header">
+        <div class="progress-title">Progres Pelaksanaan 7 Hari</div>
+        <div class="progress-stat" id="planProgressCount">0 dari 7 Selesai (0%)</div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="planProgressBar"></div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+        <span style="font-size:0.8rem; color:var(--txt-muted);">Tersimpan otomatis di browser lokal Anda</span>
+        <button class="btn btn-sm" id="btnResetPlan" style="font-size:0.75rem;">Reset Pilihan</button>
+      </div>
+    </div>
+
+    <!-- CHECKLIST ITEMS -->
+    <div class="checklist-container" id="planChecklistContainer">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+</main>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+<nav class="mobile-bottom-nav">
+  <div class="mobile-nav-grid">
+    <button class="mobile-nav-btn active" data-view="beranda">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Beranda
+    </button>
+    <button class="mobile-nav-btn" data-view="prompts">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Prompts
+    </button>
+    <button class="mobile-nav-btn" data-view="studio">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Studio
+    </button>
+    <button class="mobile-nav-btn" data-view="rambu">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Rambu
+    </button>
+    <button class="mobile-nav-btn" data-view="rencana">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Rencana
+    </button>
+  </div>
+</nav>
+
+<!-- MODAL INTERAKTIF: ISI & SESUAIKAN PROMPT -->
+<div class="modal-overlay" id="promptFillModal">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 class="serif" id="modalPromptTitle">Kustomisasi Prompt</h3>
+      <button class="modal-close" onclick="closePromptModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalPromptBody">
+      <!-- Dynamic form fields injected here -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-sm" onclick="closePromptModal()">Tutup</button>
+      <button class="btn btn-gold btn-sm" id="btnModalCopyFilled">Salin Prompt Jadi</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- FOOTER -->
+<footer class="app-footer">
+  <div class="footer-inner" style="justify-content:center; text-align:center;">
+    <div style="font-weight:700; color:#FFF; font-size:0.95rem;">
+      Birokrasi Rasa Agensi · Humas Kanwil Kemenhaj Sumatera Barat
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT LOGIC & DATA -->
+<script>
+/* ==========================================================================
+   DATA STORE DARI CHEAT SHEET
+   ========================================================================== */
+const DATA = {
+  pandu: [
+    { huruf: "P", nama: "Peran", tanya: "Siapa yang harus AI perankan?", ex: "Kamu adalah Social Media Specialist Humas Kanwil Kemenhaj Sumbar." },
+    { huruf: "A", nama: "Audiens", tanya: "Siapa yang membaca atau menonton?", ex: "Calon jemaah usia 50 tahun ke atas dan pendampingnya." },
+    { huruf: "N", nama: "Narasi & Data", tanya: "Data apa yang boleh dipakai?", ex: "Ini rilis resminya. Pakai hanya angka yang ada di dalamnya." },
+    { huruf: "D", nama: "Daya Bahasa", tanya: "Bagaimana nadanya?", ex: "Sopan, melayani, empati, ringkas. Tanpa kata optimalisasi dan sinergi." },
+    { huruf: "U", nama: "Untuk Format Apa", tanya: "Hasilnya jadi apa?", ex: "3 caption IG, 1 naskah Reels 45 detik, 1 siaran WhatsApp." }
+  ],
+  rem: {
+    label: "Kalimat Rem — tempel di akhir setiap prompt",
+    quote: "Jangan mengarang. Jika data tidak saya berikan, tulis [NANTI DIISI] dan tanyakan kepada saya.",
+    why: "Satu kalimat ini menutup paling banyak kesalahan: angka kuota, biaya, tanggal pelunasan, dan nama pejabat. Tanpa kalimat ini, AI akan mengisi kekosongan dengan angka yang terdengar masuk akal."
+  },
+  prompts: [
+    {
+      no: "P01",
+      kat: "copywriting",
+      katlabel: "Copywriting",
+      judul: "Caption Instagram dari Rilis Berita",
+      use: "Rilis baru terbit → tiga opsi caption feed siap tayang.",
+      brief: "Dipakai setiap kali berita naik ke website resmi dan feed butuh versi yang nyaman dibaca di layar ponsel.",
+      tipTitle: "Isian wajib",
+      tip: "Tempel rilis utuh, bukan hanya judulnya. AI butuh angka, nama, dan tanggal dari badan berita.",
+      lines: [
+        "PERAN",
+        "Kamu adalah Social Media Specialist Humas Kantor Wilayah Kementerian Haji dan Umrah Provinsi Sumatera Barat. Kamu menulis caption Instagram untuk calon jemaah haji dan umrah usia 30 sampai 65 tahun di Sumatera Barat.",
+        "",
+        "TUGAS",
+        "Dari rilis berita pada bagian KONTEKS, buat 3 opsi caption Instagram (feed):",
+        "- Opsi A: lugas dan informatif, untuk berita layanan.",
+        "- Opsi B: dibuka dengan satu pertanyaan atau pernyataan yang menyentuh kegelisahan jemaah.",
+        "- Opsi C: sangat ringkas, maksimal 40 kata, hanya inti yang perlu diketahui pembaca.",
+        "",
+        "KONTEKS",
+        "Judul rilis: [TEMPEL JUDUL]",
+        "Isi rilis: [TEMPEL ISI RILIS LENGKAP]",
+        "Tanggal dan lokasi: [ISI]",
+        "Narahubung atau kanal resmi: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Sopan, melayani, tenang. Bahasa Indonesia yang benar, tapi bukan bahasa surat dinas. Boleh satu sapaan 'Bapak/Ibu'. Emoji maksimal 3 dan hanya di awal baris. Dilarang kata hiperbolis seperti luar biasa, spektakuler, atau terbaik. Hindari istilah birokrasi: optimalisasi, sinergi, implementasi, stakeholder.",
+        "",
+        "UNTUK FORMAT APA",
+        "Caption feed Instagram, maksimal 150 kata, diberi jeda baris tiap 2 kalimat agar tidak tampil sebagai blok teks panjang. Akhiri dengan 5 hashtag: #KemenhajSumbar #HajiSumbar lalu 3 hashtag sesuai topik.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang angka, nama, tanggal, atau biaya. Semua data hanya boleh diambil dari KONTEKS. Jika suatu data tidak ada di dalam rilis, tulis [NANTI DIISI]. Jangan menyebut nomor telepon atau tautan yang tidak saya berikan.",
+        "",
+        "OUTPUT",
+        "Tiga opsi caption, ditutup satu bagian 'Perlu dicek sebelum tayang:' yang berisi daftar data yang harus saya verifikasi."
+      ]
+    },
+    {
+      no: "P02",
+      kat: "copywriting",
+      katlabel: "Copywriting",
+      judul: "Naskah & Caption TikTok dari Rilis Berita",
+      use: "Rilis yang sama → video vertikal 30-45 detik yang orang tonton sampai habis.",
+      brief: "Dipakai ketika satu berita perlu turun ke TikTok tanpa mengubah makna, tapi dengan bahasa yang sama sekali berbeda.",
+      tipTitle: "Kunci TikTok",
+      tip: "Hook di 3 detik pertama menentukan segalanya. Kalau tiga opsi hook yang AI beri masih terdengar seperti judul berita, tambahkan perintah: buat hook yang lebih memancing, jangan seperti judul release.",
+      lines: [
+        "PERAN",
+        "Kamu adalah konten kreator TikTok untuk kehumasan lembaga pemerintah. Kamu paham bahwa penonton menilai dalam 2 detik pertama dan langsung men-swipe video yang terasa seperti iklan dinas.",
+        "",
+        "TUGAS",
+        "Ubah rilis pada bagian KONTEKS menjadi paket konten TikTok yang terdiri dari:",
+        "1) 3 opsi HOOK berupa teks di layar untuk 3 detik pertama, maksimal 9 kata tiap opsi.",
+        "2) Naskah voice over untuk video 30-45 detik, ditulis dalam bahasa lisan, dengan tanda / sebagai tempat mengambil napas.",
+        "3) Daftar teks di layar yang muncul bergantian, maksimal 7 kata tiap kemunculan.",
+        "4) Daftar shot yang harus direkam atau diambil dari arsip, urut mengikuti naskah.",
+        "5) Caption TikTok maksimal 150 karakter dan 5 hashtag.",
+        "",
+        "KONTEKS",
+        "[TEMPEL ISI RILIS LENGKAP]",
+        "Audiens utama: [calon jemaah / jemaah lansia / keluarga jemaah / travel umrah]",
+        "Rekaman yang tersedia: [asrama haji / loket layanan / kantor / arsip kegiatan]",
+        "",
+        "DAYA BAHASA",
+        "Ramah dan jelas, seperti menjelaskan kepada saudara sendiri. Boleh memakai 'kita' dan 'Bapak/Ibu'. Dilarang istilah birokrasi: optimalisasi, sinergi, implementasi, stakeholder. Jangan memakai bahasa gaul yang dipaksakan. Satu kalimat maksimal 12 kata.",
+        "",
+        "UNTUK FORMAT APA",
+        "Video vertikal 9:16, durasi 30-45 detik, subtitle wajib menyala karena banyak penonton menonton tanpa suara.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang angka, tanggal, nama, atau biaya; ambil hanya dari rilis. Jika data tidak ada, tulis [NANTI DIISI]. Jangan membuat klaim gratis, dipermudah, tanpa antre, atau dipercepat bila tidak tertulis di rilis. Jangan memakai wajah jemaah tanpa izin.",
+        "",
+        "OUTPUT",
+        "Tabel 3 kolom: Detik | Teks di Layar | Voice Over. Di bawah tabel: daftar shot, caption, dan hashtag."
+      ]
+    },
+    {
+      no: "P03",
+      kat: "copywriting",
+      katlabel: "Copywriting",
+      judul: "Jawaban Komentar, DM, dan Pengaduan",
+      use: "Kolom komentar penuh pertanyaan → balasan seragam, sopan, tidak salah janji.",
+      brief: "Dipakai untuk membersihkan tumpukan komentar dan DM, sekaligus menemukan pertanyaan yang paling sering muncul.",
+      tipTitle: "Yang paling penting",
+      tip: "Balasan AI adalah draf. Jangan pernah tayang tanpa membaca, terutama yang menyangkut angka dan janji layanan.",
+      lines: [
+        "PERAN",
+        "Kamu adalah petugas media sosial Humas Kanwil yang menjawab komentar dan DM calon jemaah. Kamu tenang, tidak defensif, dan tidak pernah berjanji atas nama instansi.",
+        "",
+        "TUGAS",
+        "Dari daftar komentar pada bagian KONTEKS, buat tabel balasan dengan kolom:",
+        "(a) Nomor dan ringkasan komentar",
+        "(b) Balasan publik siap tempel",
+        "(c) Balasan privat atau DM, bila perlu",
+        "(d) Perlu diteruskan ke bidang? Ya atau Tidak",
+        "(e) Alasan singkat",
+        "",
+        "Aturan menulis balasan:",
+        "- Selalu sapa, akui pertanyaannya, jawab sebatas data yang saya berikan, lalu arahkan ke kanal resmi.",
+        "- Maksimal 45 kata untuk balasan publik.",
+        "- Untuk komentar marah, jangan membantah dan jangan minta maaf atas nama instansi sebelum saya perintahkan. Pakai pola: kami memahami, saat ini informasinya begini, Bapak/Ibu bisa cek di sini.",
+        "- Untuk komentar yang menyebarkan hoaks, jangan mempermalukan penulisnya. Koreksi dengan data dan rujuk kanal resmi.",
+        "- Tandai komentar yang berpotensi menjadi isu besar dengan label ESKALASI.",
+        "",
+        "KONTEKS",
+        "Daftar komentar atau DM: [TEMPEL]",
+        "Data resmi yang boleh dipakai: [ISI, misalnya jadwal, kanal layanan, syarat]",
+        "Narahubung resmi: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Sopan, hangat, singkat. Emoji maksimal 1.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang angka kuota, biaya, tanggal pelunasan, atau nama pejabat. Jangan menulis kalimat yang bisa dibaca sebagai janji penyelesaian. Bila data tidak saya berikan, tulis [NANTI DIISI] pada kolom jawaban.",
+        "",
+        "OUTPUT",
+        "Tabel sesuai kolom di atas, lalu satu bagian '3 pertanyaan yang paling sering muncul' sebagai calon bahan konten edukasi."
+      ]
+    },
+    {
+      no: "P04",
+      kat: "copywriting",
+      katlabel: "Copywriting",
+      judul: "Siaran WhatsApp & Pengumuman Grup",
+      use: "Pengumuman resmi yang dibaca tuntas di grup jemaah, grup travel, dan grup koordinasi.",
+      brief: "Dipakai untuk kanal yang paling ramai di Sumatera Barat, yaitu WhatsApp. Formatnya beda total dengan feed.",
+      tipTitle: "Batas karakter",
+      tip: "Tahan godaan menambah info. Grup WhatsApp ramai: satu pesan, satu keperluan, satu ajakan.",
+      lines: [
+        "PERAN",
+        "Kamu adalah humas pemerintah yang menulis siaran WhatsApp untuk grup jemaah, grup travel umrah, dan grup koordinasi internal.",
+        "",
+        "TUGAS",
+        "Dari materi pada bagian KONTEKS, buat 3 versi siaran:",
+        "1) Grup jemaah: hangat, maksimal 600 karakter, satu ajakan.",
+        "2) Grup travel dan pimpinan: formal-ringkas, maksimal 700 karakter, sertakan dasar aturan bila ada.",
+        "3) Broadcast pribadi: maksimal 300 karakter, terasa seperti pesan dari petugas yang dikenal.",
+        "",
+        "Format wajib untuk setiap versi:",
+        "- Baris pertama: kata kunci dalam tanda bintang, contoh *PENGUMUMAN*, diikuti topik.",
+        "- Isi memakai penomoran, maksimal 6 baris, satu gagasan per baris.",
+        "- Baris penutup: 'Informasi resmi hanya melalui kanal berikut:' lalu daftar kanal yang saya berikan.",
+        "- Tanpa tautan pendek, emoji maksimal 2, jangan memakai huruf kapital penuh.",
+        "",
+        "KONTEKS",
+        "Materi atau pengumuman: [TEMPEL]",
+        "Tanggal berlaku: [ISI]",
+        "Kanal resmi: [ISI]",
+        "",
+        "ATURAN WAJIB",
+        "Jangan menambah syarat, biaya, atau tanggal yang tidak saya berikan. Jangan memakai desakan seperti segera daftar atau ancaman tenggat bila tenggatnya tidak ada di materi. Semua angka harus bisa saya telusuri ke sumber.",
+        "",
+        "OUTPUT",
+        "Tiga blok teks siap salin, masing-masing diawali label versinya, ditutup daftar isian yang masih kosong bertanda [NANTI DIISI]."
+      ]
+    },
+    {
+      no: "P05",
+      kat: "visual",
+      katlabel: "Brief Visual",
+      judul: "Brief Infografis untuk Desainer",
+      use: "Satu materi → arahan lengkap, desainer sekali kerja tanpa bertanya berulang.",
+      brief: "Dipakai ketika humas butuh infografis satu halaman dan desainer internal tidak punya waktu untuk menebak maksud.",
+      tipTitle: "Peran AI di sini",
+      tip: "AI membuat arahan, bukan desain final. Hasilnya diteruskan ke desainer, dan tetap perlu dicek apakah datanya cocok dengan sumber.",
+      lines: [
+        "PERAN",
+        "Kamu adalah Art Director yang menyiapkan creative brief untuk desainer grafis humas pemerintah. Tugasmu bukan mendesain, melainkan memberi arahan agar desainer bekerja sekali jadi tanpa bertanya berulang.",
+        "",
+        "TUGAS",
+        "Dari materi pada bagian KONTEKS, buat brief infografis 1 halaman berukuran 1080x1350 px, berisi 7 bagian bernomor:",
+        "1) JUDUL UTAMA: maksimal 8 kata, ditulis sebagai kalimat yang diucapkan jemaah, bukan judul program.",
+        "2) PESAN TUNGGAL: satu hal yang harus dipahami pembaca dalam 10 detik.",
+        "3) STRUKTUR BLOK: 4 sampai 6 blok. Tiap blok memuat judul maksimal 4 kata, isi maksimal 25 kata, dan usulan ikon.",
+        "4) ANGKA YANG DITONJOLKAN: 1 sampai 3 angka dari materi yang layak dibuat besar.",
+        "5) ARAHAN VISUAL: palet hitam dan emas sesuai identitas visual yang berlaku; tipografi sans-serif; ukuran teks terkecil minimal 24 pt; margin lega; kontras tinggi; maksimal 3 elemen per baris.",
+        "6) TEKS PENUTUP: satu baris ajakan ditambah kanal resmi.",
+        "7) ALT TEXT: deskripsi maksimal 125 karakter untuk pembaca layar.",
+        "",
+        "KONTEKS",
+        "[TEMPEL MATERI ATAU RILIS]",
+        "Target pembaca: [misalnya calon jemaah lansia dan pendampingnya]",
+        "",
+        "DAYA BAHASA",
+        "Instruksi kerja yang presisi, tanpa basa-basi, tanpa istilah desain yang tidak perlu.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan menambah data yang tidak ada di KONTEKS. Semua angka, syarat, dan tanggal harus bisa saya telusuri kembali ke materi sumber. Bila sebuah blok membutuhkan data yang belum saya berikan, tulis [NANTI DIISI] pada blok itu dan sebutkan datanya perlu ditanyakan ke bidang apa.",
+        "",
+        "OUTPUT",
+        "Tujuh bagian bernomor, siap diteruskan ke desainer tanpa perlu saya rapikan lagi."
+      ]
+    },
+    {
+      no: "P06",
+      kat: "visual",
+      katlabel: "Brief Visual",
+      judul: "Brief Carousel Instagram 8 Slide",
+      use: "Edukasi panjang → carousel yang orang swipe sampai slide terakhir.",
+      brief: "Dipakai untuk materi berat: alur pendaftaran, syarat istithaah kesehatan, alur umrah, regulasi baru.",
+      tipTitle: "Kenapa ada kolom Catatan Swipe",
+      tip: "Ini baris yang membedakan carousel lembaga dari carousel yang membosankan: tiap slide harus punya alasan agar orang lanjut.",
+      lines: [
+        "PERAN",
+        "Kamu adalah Content Strategist yang menyusun carousel Instagram untuk lembaga pelayanan publik. Kamu paham carousel dibaca seperti presentasi mini: orang men-swipe hanya bila slide sebelumnya membuka pertanyaan.",
+        "",
+        "TUGAS",
+        "Dari materi pada bagian KONTEKS, susun carousel 8 slide dengan struktur:",
+        "- Slide 1 (COVER): judul pemantik maksimal 10 kata dan subjudul 1 baris. Bukan judul berita.",
+        "- Slide 2 (MASALAH): kegelisahan pembaca dinyatakan dengan jujur.",
+        "- Slide 3 sampai 6 (ISI): satu gagasan per slide, judul maksimal 6 kata dan uraian maksimal 35 kata.",
+        "- Slide 7 (RINGKASAN): poin-poin yang layak difoto pembaca.",
+        "- Slide 8 (AJAKAN): langkah yang harus dilakukan dan kanal resmi.",
+        "",
+        "Untuk SETIAP slide tuliskan 4 baris: TEKS JUDUL, TEKS ISI, ARAHAN VISUAL atau ELEMEN, dan CATATAN SWIPE yang menjelaskan mengapa orang lanjut ke slide berikutnya.",
+        "",
+        "KONTEKS",
+        "[TEMPEL MATERI]",
+        "",
+        "DAYA BAHASA",
+        "Mengalir, satu gagasan per kalimat, tanpa bullet bertumpuk. Angka memakai angka Arab.",
+        "",
+        "UNTUK FORMAT APA",
+        "Carousel 1080x1080 px, palet hitam dan emas, font sans-serif berkontras tinggi, maksimal 40 kata per slide agar terbaca di ponsel tanpa perlu diperbesar.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang syarat, biaya, tahapan, atau tanggal. Semua langkah harus berasal dari materi sumber. Bila ada tahapan yang datanya belum saya berikan, tulis [NANTI DIISI].",
+        "",
+        "OUTPUT",
+        "Tabel 5 kolom: Slide | Teks Judul | Teks Isi | Arahan Visual | Catatan Swipe. Ditutup caption carousel maksimal 80 kata."
+      ]
+    },
+    {
+      no: "P07",
+      kat: "visual",
+      katlabel: "Brief Visual",
+      judul: "Audit Konsistensi Visual Akun",
+      use: "Feed berantakan → daftar temuan, aturan baku, dan checklist sebelum unggah.",
+      brief: "Dipakai di awal masa kerja atau sebelum menyusun panduan visual resmi Kanwil.",
+      tipTitle: "Cara memberi bahan",
+      tip: "Tempel tautan akun atau unggah tangkapan layar 9 feed terakhir. Semakin banyak bahan, temuannya semakin spesifik.",
+      lines: [
+        "PERAN",
+        "Kamu adalah konsultan identitas visual yang mengaudit kelayakan akun media sosial lembaga pemerintah.",
+        "",
+        "TUGAS",
+        "Saya akan memberikan tautan atau tangkapan layar akun. Bekerja dalam 4 langkah:",
+        "1) DAFTAR TEMUAN: maksimal 10 ketidakseragaman yang terlihat, mencakup warna, font, ukuran dan letak logo, jarak teks ke tepi, gaya foto, susunan highlight, dan cara menulis judul.",
+        "2) TINGKAT RISIKO: tandai tiap temuan dengan mendesak, penting, atau penyempurnaan.",
+        "3) ATURAN BAKU: susun 8 baris aturan yang menambal temuan itu, dengan format: Yang berlaku / Contoh salah / Contoh benar.",
+        "4) CHECKLIST DESAINER: 10 pertanyaan singkat yang harus dicek sebelum unggah.",
+        "",
+        "KONTEKS",
+        "Akun yang diaudit: [TAUTAN ATAU TANGKAPAN LAYAR]",
+        "Identitas yang harus dipakai: palet hitam dan emas sesuai identitas visual yang berlaku.",
+        "Audiens: masyarakat calon jemaah dari berbagai usia, termasuk lansia.",
+        "",
+        "DAYA BAHASA",
+        "Objektif dan spesifik. Sebutkan letak temuan, misalnya slide ke-3, pojok kanan atas. Jangan menilai dengan kata kurang bagus tanpa alasan.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang nama akun, jumlah pengikut, atau angka statistik. Bila sesuatu tidak terlihat jelas pada bahan yang saya berikan, tulis tidak dapat dipastikan.",
+        "",
+        "OUTPUT",
+        "Empat bagian bernomor. Bagian 3 dibuat sebagai tabel 3 kolom agar bisa langsung ditempel ke panduan internal."
+      ]
+    },
+    {
+      no: "P08",
+      kat: "repurposing",
+      katlabel: "Repurposing",
+      judul: "Naskah Storytelling Reels 60 Detik",
+      use: "HOOK → CREDIBILITY → REVERSE PSYCHOLOGY → PROBLEM-SOLUTION → CALL TO ACTION.",
+      brief: "Prompt paling kuat untuk konten edukasi yang harus ditonton sampai habis. Satu topik per video.",
+      tipTitle: "Reverse psychology, bukan menakut-nakuti",
+      tip: "Kalau hasilnya terdengar menyalahkan jemaah, tambahkan perintah: tulis ulang bagian 3 dengan nada yang tidak menyalahkan pembaca.",
+      lines: [
+        "PERAN",
+        "Kamu adalah penulis naskah video pendek untuk kehumasan lembaga pemerintah. Kamu menulis dengan lima prinsip berurutan: HOOK, CREDIBILITY, REVERSE PSYCHOLOGY, PROBLEM-SOLUTION, CALL TO ACTION.",
+        "",
+        "TUGAS",
+        "Dari materi pada bagian KONTEKS, tulis naskah storytelling Reels vertikal durasi 60 detik yang terbagi persis ke dalam lima bagian berikut.",
+        "",
+        "1) HOOK (detik 0-3)",
+        "Kalimat yang menghentikan jempol. Buat 3 pilihan, masing-masing maksimal 12 kata. Dilarang membuka dengan kata halo, salam pembuka, nama acara, atau nama instansi.",
+        "",
+        "2) CREDIBILITY (detik 3-12)",
+        "Tunjukkan bahwa yang bicara tahu apa yang dibicarakan. Pakai data, fakta lapangan, atau pengalaman pelayanan dari materi sumber. Maksimal 30 kata.",
+        "",
+        "3) REVERSE PSYCHOLOGY (detik 12-25)",
+        "Balik satu asumsi keliru yang paling sering dipegang calon jemaah, dengan sopan. Pola kalimat: Banyak yang mengira ..., padahal ... atau Kalau menunggu sampai benar-benar siap, yang terjadi justru .... Maksimal 40 kata. Dilarang menakut-nakuti, menyalahkan, atau merendahkan pilihan pembaca.",
+        "",
+        "4) PROBLEM-SOLUTION (detik 25-50)",
+        "Sebutkan satu masalah nyata, lalu tunjukkan langkah yang tersedia. Maksimal 60 kata. Sertakan satu langkah konkret yang bisa dilakukan pembaca hari ini juga.",
+        "",
+        "5) CALL TO ACTION (detik 50-60)",
+        "Satu ajakan saja, jelas, memakai kanal yang saya berikan. Maksimal 20 kata.",
+        "",
+        "KONTEKS",
+        "[TEMPEL MATERI ATAU RILIS]",
+        "Audiens: [ISI]",
+        "Satu hal yang harus dilakukan penonton setelah menonton: [ISI]",
+        "Kanal yang boleh disebut: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Hangat dan manusiawi, kalimat pendek, seperti petugas sabar yang menjelaskan di loket, bukan seperti pembawa acara. Hindari kata: optimalisasi, sinergi, transformasi, implementasi.",
+        "",
+        "UNTUK FORMAT APA",
+        "Video 9:16, subtitle menyala, tetap dipahami tanpa suara, satu orang bicara di depan kamera atau voice over di atas rekaman kegiatan.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang angka, nama, biaya, atau tanggal; semua data hanya dari KONTEKS. Bila data tidak tersedia, tulis [NANTI DIISI]. Jangan membuat janji layanan yang tidak tertulis di materi sumber. Jangan menyebut nama jemaah.",
+        "",
+        "OUTPUT",
+        "Tabel 5 kolom: Bagian | Detik | Voice Over | Teks di Layar | Visual atau Shot. Di bawah tabel: 3 opsi HOOK, caption Reels maksimal 100 kata, dan daftar data yang harus saya cek sebelum tayang."
+      ]
+    },
+    {
+      no: "P09",
+      kat: "repurposing",
+      katlabel: "Repurposing",
+      judul: "The Magic Trick: Satu Rilis Jadi Lima Konten",
+      use: "Satu berita → script Reels, utas X, infografis 4 slide, caption Facebook, siaran WhatsApp.",
+      brief: "Ini demo puncak sesi pelatihan: rilis hasil tulisan peserta di sesi sebelumnya, diolah jadi lima turunan dalam satu jalan.",
+      tipTitle: "Untuk demo langsung",
+      tip: "Siapkan 2 rilis cadangan dari situs resmi Kanwil, kalau peserta tidak ada yang membawa teks. Jangan pakai rilis yang memuat nama jemaah.",
+      lines: [
+        "PERAN",
+        "Kamu adalah tim produksi konten terpadu Humas Kanwil: penulis caption, penulis naskah video, perancang infografis, dan petugas layanan, bekerja dalam satu jalan.",
+        "",
+        "TUGAS",
+        "Dari SATU rilis berita pada bagian KONTEKS, hasilkan 5 turunan konten:",
+        "1) SCRIPT REELS 45 DETIK, memakai urutan HOOK, CREDIBILITY, PROBLEM-SOLUTION, CALL TO ACTION. Tulis per detik, lengkap dengan teks di layar.",
+        "2) UTAS X/TWITTER 3 CUITAN, tiap cuitan maksimal 240 karakter, bisa berdiri sendiri bila dibaca terpisah, cuitan terakhir memuat kanal resmi.",
+        "3) TEKS INFOGRAFIS INSTAGRAM 4 SLIDE, tiap slide berisi judul maksimal 6 kata, isi maksimal 30 kata, dan usulan ikon.",
+        "4) CAPTION FACEBOOK, gaya bercerita, maksimal 120 kata, 3 paragraf pendek.",
+        "5) SIARAN WHATSAPP, maksimal 600 karakter, format penomoran, ditutup daftar kanal resmi.",
+        "",
+        "KONTEKS",
+        "[TEMPEL RILIS LENGKAP]",
+        "Kanal resmi: [ISI]",
+        "Narahubung: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Sopan, melayani, empati, ringkas. Nada harus konsisten di semua format: satu suara humas, bukan lima gaya yang berbeda.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan menambah angka, nama pejabat, tanggal, atau biaya yang tidak ada di rilis. Bila ada yang belum jelas, tulis [NANTI DIISI]. Jangan mengubah makna judul rilis.",
+        "",
+        "OUTPUT",
+        "Lima bagian sesuai nomor di atas, masing-masing dalam satu blok teks siap salin. Ditutup tabel ringkas: Konten | Platform | Waktu tayang yang disarankan."
+      ]
+    },
+    {
+      no: "P10",
+      kat: "repurposing",
+      katlabel: "Repurposing",
+      judul: "Kegiatan Protokoler Jadi Konten",
+      use: "Rundown acara → brief dokumentasi, caption momen, rundown publik, naskah pembukaan.",
+      brief: "Dipakai sebelum keberangkatan jemaah, pelepasan, bimbingan manasik, dan kepulangan.",
+      tipTitle: "Kesalahan yang paling sering",
+      tip: "Salah gelar dan salah urutan nama pejabat adalah kesalahan yang tidak bisa diperbaiki setelah tayang. Selalu cek bagian ini secara manual.",
+      lines: [
+        "PERAN",
+        "Kamu adalah petugas protokoler sekaligus humas yang memahami tata urutan acara pemerintahan dan kebutuhan dokumentasi media sosial.",
+        "",
+        "TUGAS",
+        "Dari jadwal atau kegiatan pada bagian KONTEKS, buat 4 paket:",
+        "1) BRIEF DOKUMENTASI: daftar momen wajib diabadikan, urut sesuai rundown, maksimal 12 momen. Tiap momen ditulis: apa yang direkam, sudut pengambilan, siapa yang harus ada dalam frame, dan catatan larangan, misalnya wajah jemaah tanpa izin.",
+        "2) CAPTION MOMEN: 3 caption pendek maksimal 40 kata, untuk pelepasan jemaah, prosesi, dan kepulangan.",
+        "3) RUNDOWN PUBLIK: versi jadwal yang boleh disebar ke masyarakat, hanya memuat informasi yang perlu diketahui jemaah, tanpa nama pejabat yang tidak perlu disebut.",
+        "4) NASKAH PEMBUKAAN 30 DETIK untuk video dokumentasi kegiatan, bahasa resmi tapi tidak kaku.",
+        "",
+        "KONTEKS",
+        "Nama kegiatan: [ISI]",
+        "Waktu dan tempat: [ISI]",
+        "Rundown: [TEMPEL]",
+        "Yang boleh dipublikasikan: [ISI]",
+        "Yang tidak boleh dipublikasikan: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Resmi, tertata, tenang. Sebut jabatan dengan benar dan lengkap.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang nama, jabatan, gelar, atau urutan acara. Bila tidak saya berikan, tulis [NANTI DIISI], jangan menebak. Jangan menaruh nama jemaah atau data pribadi apa pun di dalam caption.",
+        "",
+        "OUTPUT",
+        "Empat bagian bernomor, siap cetak untuk petugas dokumentasi."
+      ]
+    },
+    {
+      no: "P11",
+      kat: "perencanaan",
+      katlabel: "Perencanaan",
+      judul: "Kalender Konten 30 Hari",
+      use: "Agenda Kanwil dan pertanyaan jemaah → jadwal tayang sebulan penuh.",
+      brief: "Dipakai di awal bulan atau awal tahap layanan, misalnya sebelum pembukaan pelunasan.",
+      tipTitle: "Biar tidak berhenti di tengah jalan",
+      tip: "Minta AI menandai kolom Sumber Bahan. Kalau isinya belum ada, itu pekerjaan yang harus dijadwalkan, bukan sekadar konten yang belum ditulis.",
+      lines: [
+        "PERAN",
+        "Kamu adalah penyusun kalender konten kehumasan pemerintah yang memahami ritus pelayanan haji dan umrah sepanjang tahun.",
+        "",
+        "TUGAS",
+        "Susun kalender konten 30 hari dalam bentuk tabel dengan kolom:",
+        "Tanggal | Hari | Babak Layanan (EDUKASI, LAYANAN, MOMENTUM, RESPON) | Judul Konten | Format (Reels, Carousel, Infografis, Feed, TikTok, Story) | Corong (TOFU, MOFU, BOFU) | Sumber Bahan | Penanggung Jawab.",
+        "",
+        "Aturan penyusunan:",
+        "- Maksimal 4 konten per pekan di feed; sisanya Story atau konten ringan.",
+        "- Selang-seling: satu konten edukasi berat diikuti satu konten ringan atau momen lapangan.",
+        "- Sertakan minimal 4 konten yang menjawab pertanyaan jemaah yang paling sering muncul.",
+        "- Sertakan minimal 2 konten yang menyinggung regulasi umrah terbaru bila saya memberinya.",
+        "- Setiap akhir pekan: satu konten rekap atau pengingat tenggat.",
+        "",
+        "KONTEKS",
+        "Periode: [ISI]",
+        "Agenda Kanwil pada periode ini: [TEMPEL]",
+        "Pertanyaan jemaah yang paling sering masuk: [TEMPEL]",
+        "Kanal resmi: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Ringkas. Judul konten maksimal 8 kata.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang tanggal pelunasan, kuota, atau agenda resmi. Semua tanggal hanya dari KONTEKS; sisanya tulis [NANTI DIISI].",
+        "",
+        "OUTPUT",
+        "Tabel 30 baris, lalu 3 catatan: beban kerja mingguan, bahan yang masih kurang, dan konten yang perlu persetujuan atasan."
+      ]
+    },
+    {
+      no: "P12",
+      kat: "perencanaan",
+      katlabel: "Perencanaan",
+      judul: "Peta Bio & Etalase Digital",
+      use: "Profil akun → bio, urutan tautan, sorotan, dan hal yang harus dihapus.",
+      brief: "Dipakai sebelum memperbanyak konten: etalase dirapikan lebih dulu, baru isinya ditambah.",
+      tipTitle: "Baris yang paling sering dilupakan",
+      tip: "Satu tautan mati di bio merusak kepercayaan lebih besar daripada satu feed yang tidak rapi. Cek semua tautan sebelum tayang.",
+      lines: [
+        "PERAN",
+        "Kamu adalah ahli optimasi profil media sosial untuk lembaga pelayanan publik.",
+        "",
+        "TUGAS",
+        "Buat peta etalase digital untuk akun-akun pada bagian KONTEKS, terdiri dari 5 bagian:",
+        "1) BIO: 3 opsi bio maksimal 150 karakter. Tiap opsi wajib memuat siapa kami, satu hal yang bisa dilakukan pembaca hari ini, dan satu tautan.",
+        "2) SUSUNAN TAUTAN: urutan 5 tautan teratas di halaman link, dimulai dari yang paling sering dicari masyarakat.",
+        "3) SOROTAN ATAU HIGHLIGHT: 6 nama sorotan, maksimal 12 karakter tiap nama, beserta isi masing-masing.",
+        "4) BARIS PERTAMA KOMENTAR: satu kalimat yang dipasang di komentar pertama untuk mengarahkan pembaca.",
+        "5) TIGA HAL YANG HARUS DIHAPUS: bagian bio atau sorotan lama yang justru membingungkan masyarakat.",
+        "",
+        "KONTEKS",
+        "Akun: [Instagram, TikTok, YouTube, Facebook, beserta tautannya]",
+        "Layanan yang tersedia: [ISI]",
+        "Jam layanan: [ISI]",
+        "Kanal pengaduan: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Jelas. Tanpa singkatan yang hanya dimengerti orang kantor.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang tautan, nomor, atau jam layanan. Bila tidak saya berikan, tulis [NANTI DIISI].",
+        "",
+        "OUTPUT",
+        "Lima bagian bernomor. Bagian 1 dan 3 dibuat dalam bentuk tabel agar mudah dibandingkan."
+      ]
+    },
+    {
+      no: "P13",
+      kat: "perencanaan",
+      katlabel: "Perencanaan",
+      judul: "Pertanyaan Jemaah Jadi Ide Konten",
+      use: "Komentar, DM, dan pertanyaan loket → topik terurut dan 10 ide konten.",
+      brief: "Dipakai untuk mencari bahan konten dengan data, bukan dengan perkiraan. Sekaligus jadi dasar laporan bulanan.",
+      tipTitle: "Jaga data pribadi",
+      tip: "Sebelum menempel daftar pertanyaan, hapus nama, NIK, dan nomor rekening jemaah. Cukup simpan isi pertanyaannya.",
+      lines: [
+        "PERAN",
+        "Kamu adalah analis pertanyaan publik untuk kehumasan lembaga pelayanan.",
+        "",
+        "TUGAS",
+        "Dari daftar pertanyaan pada bagian KONTEKS, yang berasal dari komentar, DM, pertanyaan di loket, atau isi pengaduan, lakukan 4 langkah:",
+        "1) KELOMPOKKAN menjadi 6 sampai 8 topik besar, dan sebutkan berapa pertanyaan masuk ke tiap topik.",
+        "2) URUTKAN dari yang paling sering ditanyakan, lalu tandai topik yang jawabannya paling sering salah dipahami masyarakat.",
+        "3) USULKAN 10 ide konten. Tiap ide berisi judul, format yang cocok (Reels, Carousel, Infografis, Story), dan corong (TOFU, MOFU, BOFU).",
+        "4) TULISKAN 5 pertanyaan yang belum bisa dijawab dari data saya. Ini yang harus ditanyakan ke bidang terkait.",
+        "",
+        "KONTEKS",
+        "Daftar pertanyaan: [TEMPEL, minimal 20 baris]",
+        "Periode pertanyaan: [ISI]",
+        "",
+        "DAYA BAHASA",
+        "Objektif. Sebutkan kutipan asli pertanyaan bila dipakai sebagai contoh.",
+        "",
+        "ATURAN WAJIB",
+        "Jangan mengarang jumlah pertanyaan atau persentase. Hitung hanya dari daftar yang saya berikan. Bila sebuah pertanyaan memuat nama, NIK, atau nomor rekening, jangan tulis ulang datanya, cukup tandai berisi data pribadi.",
+        "",
+        "OUTPUT",
+        "Empat bagian bernomor. Bagian 1 dan 3 dibuat dalam bentuk tabel."
+      ]
+    }
+  ],
+  rambu: [
+    { judul: "Fatwa dan hukum agama", desc: "AI boleh merapikan bahasa, tidak boleh menetapkan hukum. Untuk urusan fikih, rujuk ke bidang terkait atau ulama yang ditunjuk instansi." },
+    { judul: "Angka resmi", desc: "Kuota, BPIH, biaya travel, masa tunggu, dan setoran awal. Satu digit salah berarti pengaduan ramai dan surat klarifikasi." },
+    { judul: "Tanggal dan tenggat", desc: "Batas pelunasan, jadwal keberangkatan, penutupan pendaftaran. Tanggal bisa berubah dan AI tidak tahu perubahan hari ini." },
+    { judul: "Pernyataan pejabat", desc: "Nama, gelar, jabatan, dan kutipan. Jangan pernah membuat kutipan yang belum pernah diucapkan, dan jangan menyingkat gelar." },
+    { judul: "Data pribadi jemaah", desc: "Nama lengkap, NIK, nomor rekening, wajah tanpa izin, daftar nama jemaah satu kloter. Ini ranah perlindungan data, bukan bahan konten." },
+    { judul: "Keputusan layanan", desc: "Kelulusan, pembatalan, mutasi, sanksi travel, dan perubahan kloter. AI tidak boleh membuat kalimat yang terdengar seperti keputusan resmi." }
+  ],
+  funnel: [
+    { lvl: "TOFU", nama: "Jangkau", goal: "Dilihat orang yang belum mengenal kami.", fmt: "Reels dan TikTok: suasana asrama haji, momen pelepasan jemaah, tips singkat 30 detik.", exm: "Suasana masuk asrama haji Tabing pukul 05.00, [jumlah] jemaah kloter pertama." },
+    { lvl: "MOFU", nama: "Pahami", goal: "Menjawab pertanyaan yang membuat orang ragu mendaftar.", fmt: "Carousel dan infografis: syarat istithaah kesehatan, alur pendaftaran, regulasi umrah terbaru.", exm: "Lima hal yang membuat pendaftaran haji tertunda, dan cara menghindarinya." },
+    { lvl: "BOFU", nama: "Bertindak", goal: "Masyarakat melakukan satu langkah layanan yang pasti.", fmt: "Feed image: pengumuman kuota, batas pelunasan, jadwal kesehatan, kanal pengaduan.", exm: "Pelunasan BPIH tahap I ditutup [tanggal]. Cek status di [kanal resmi]." }
+  ],
+  kit: [
+    { nama: "Pengumuman Resmi", desc: "Hitam pekat, judul besar, satu angka atau satu tanggal yang ditonjolkan, kanal resmi di bagian bawah." },
+    { nama: "Edukasi Carousel", desc: "Sampul pemantik, satu gagasan per slide, slide terakhir ringkasan yang layak difoto." },
+    { nama: "Ucapan Hari Besar", desc: "Satu format tetap untuk Idul Fitri, Idul Adha, tahun baru Hijriah, dan hari besar nasional." },
+    { nama: "Dokumentasi Kegiatan", desc: "Foto utama, judul kegiatan, satu kalimat makna, tanpa daftar nama panjang di dalam gambar." },
+    { nama: "Pengumuman Petugas & Jadwal", desc: "Tabel ringkas, kontras tinggi, ukuran huruf besar karena dibaca jemaah lansia." },
+    { nama: "Jawaban Pengaduan", desc: "Format klarifikasi: fakta, langkah yang sudah diambil, kanal lanjutan. Tanpa nada membela diri." }
+  ],
+  metrik: [
+    { nama: "Jangkauan", how: "Reach mingguan dan berapa persen penonton yang bertahan 3 detik pertama video.", tgt: "Lihat tren 4 pekan. Satu video yang jangkauannya dua kali rata-rata berarti topiknya layak diulang." },
+    { nama: "Saves & Shares", how: "Simpan dan bagikan per konten. Ini indikator paling jujur untuk konten edukasi.", tgt: "Carousel dan infografis yang disimpan orang jauh lebih berharga daripada yang cuma disukai." },
+    { nama: "Pertanyaan", how: "Jumlah DM dan komentar bertanya per pekan.", tgt: "Turun berarti konten sudah menjawab. Naik berarti ada informasi yang belum sampai ke masyarakat." },
+    { nama: "Konversi Layanan", how: "Klik tautan bio, pesan masuk ke kanal pengaduan, dan kunjungan ke loket.", tgt: "Ukur di masa padat: pembukaan pelunasan, validasi data, dan keberangkatan kloter." }
+  ],
+  rencana: [
+    { hari: "Hari 1", tugas: "Rapikan bio dan susun 5 tautan teratas", hasil: "Etalase jelas dalam 3 detik pertama" },
+    { hari: "Hari 2", tugas: "Pasang 6 sorotan dan hapus konten lama yang membingungkan", hasil: "Arsip akun tidak lagi saling bertentangan" },
+    { hari: "Hari 3", tugas: "Tetapkan palet hitam-emas, font, dan grid jadi satu halaman panduan", hasil: "Satu dokumen rujukan desain, dipakai bersama" },
+    { hari: "Hari 4", tugas: "Buat 6 template kit dari panduan itu", hasil: "Desain turun dari sekitar 2 jam ke 20 menit" },
+    { hari: "Hari 5", tugas: "Ambil 1 rilis, ubah jadi 5 konten memakai prompt P09", hasil: "Bukti nyata satu bahan untuk lima kanal" },
+    { hari: "Hari 6", tugas: "Buat 1 Reels 60 detik dengan lima prinsip memakai prompt P08", hasil: "Konten edukasi yang ditonton sampai habis" },
+    { hari: "Hari 7", tugas: "Catat 4 metrik dan pilih 3 topik dari pertanyaan jemaah", hasil: "Laporan bulanan berbasis angka, bukan perasaan" }
+  ]
+};
+
+/* ==========================================================================
+   APP STATE & STORAGE
+   ========================================================================== */
+const STATE = {
+  currentView: 'beranda',
+  selectedCategory: 'all',
+  searchQuery: '',
+  favorites: JSON.parse(localStorage.getItem('humas_pandu_favs') || '[]'),
+  checkedTasks: JSON.parse(localStorage.getItem('humas_pandu_tasks') || '{}')
+};
+
+/* ==========================================================================
+   INITIALIZATION
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  renderPanduCards();
+  renderCategoryTabs();
+  renderPromptsList();
+  renderRambuCards();
+  renderFunnelAndKits();
+  renderPlanChecklist();
+  initEventListeners();
+  updateProgressDisplays();
+});
+
+/* ==========================================================================
+   VIEW SWITCHING
+   ========================================================================== */
+function switchView(viewName) {
+  STATE.currentView = viewName;
+
+  // Update Sections
+  document.querySelectorAll('.app-view').forEach(view => {
+    view.classList.remove('active-view');
+  });
+  const targetView = document.getElementById(`view-${viewName}`);
+  if (targetView) {
+    targetView.classList.add('active-view');
+  }
+
+  // Update Desktop Nav
+  document.querySelectorAll('#desktopNav .nav-item').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.view === viewName);
+  });
+
+  // Update Mobile Nav
+  document.querySelectorAll('.mobile-bottom-nav .mobile-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.view === viewName);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ==========================================================================
+   RENDERERS
+   ========================================================================== */
+function renderPanduCards() {
+  const container = document.getElementById('panduCardList');
+  if (!container) return;
+
+  container.innerHTML = DATA.pandu.map(item => `
+    <div class="pandu-card">
+      <div class="pandu-card-letter">${item.huruf}</div>
+      <div class="pandu-card-name">${item.nama}</div>
+      <div class="pandu-card-q">${item.tanya}</div>
+      <div class="pandu-card-ex"><b>Contoh:</b> "${item.ex}"</div>
+    </div>
+  `).join('');
+}
+
+function renderCategoryTabs() {
+  const container = document.getElementById('categoryTabs');
+  if (!container) return;
+
+  const categories = [
+    { id: 'all', label: 'Semua', count: DATA.prompts.length },
+    { id: 'copywriting', label: 'Copywriting', count: DATA.prompts.filter(p => p.kat === 'copywriting').length },
+    { id: 'visual', label: 'Brief Visual', count: DATA.prompts.filter(p => p.kat === 'visual').length },
+    { id: 'repurposing', label: 'Repurposing', count: DATA.prompts.filter(p => p.kat === 'repurposing').length },
+    { id: 'perencanaan', label: 'Perencanaan', count: DATA.prompts.filter(p => p.kat === 'perencanaan').length },
+    { id: 'favorite', label: 'Favorit ⭐', count: STATE.favorites.length }
+  ];
+
+  container.innerHTML = categories.map(cat => `
+    <button class="cat-btn ${STATE.selectedCategory === cat.id ? 'active' : ''}" data-cat="${cat.id}">
+      ${cat.label} (${cat.count})
+    </button>
+  `).join('');
+
+  container.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      STATE.selectedCategory = btn.dataset.cat;
+      renderCategoryTabs();
+      renderPromptsList();
+    });
+  });
+}
+
+function renderPromptsList() {
+  const container = document.getElementById('promptsAccordionList');
+  const countDisplay = document.getElementById('promptCountText');
+  if (!container) return;
+
+  const q = STATE.searchQuery.toLowerCase().trim();
+  const filtered = DATA.prompts.filter(p => {
+    const matchesCategory = 
+      STATE.selectedCategory === 'all' ? true :
+      STATE.selectedCategory === 'favorite' ? STATE.favorites.includes(p.no) :
+      p.kat === STATE.selectedCategory;
+
+    if (!matchesCategory) return false;
+    if (!q) return true;
+
+    const haystack = (p.no + ' ' + p.judul + ' ' + p.use + ' ' + (p.brief || '') + ' ' + (p.tip || '') + ' ' + p.lines.join(' ')).toLowerCase();
+    return haystack.includes(q);
+  });
+
+  if (countDisplay) {
+    countDisplay.textContent = `Menampilkan ${filtered.length} dari ${DATA.prompts.length} prompt`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="background:var(--bg-card); border:1px solid var(--line-dim); border-radius:var(--radius-md); padding:32px; text-align:center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--txt-muted)" stroke-width="1.5" style="margin-bottom:12px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <h4 style="color:#FFF; font-size:1.1rem; margin-bottom:6px;">Tidak ada prompt yang cocok</h4>
+        <p style="font-size:0.86rem; color:var(--txt-muted);">Coba cari kata kunci lain seperti "caption", "tiktok", "reels", "carousel", atau reset kategori ke "Semua".</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map((p, idx) => {
+    const isFav = STATE.favorites.includes(p.no);
+    const fullText = p.lines.join('\n');
+    return `
+      <div class="prompt-card" id="card-${p.no}" data-no="${p.no}">
+        <div class="prompt-header" onclick="togglePromptCard('${p.no}')">
+          <div class="prompt-meta-left">
+            <div class="prompt-no-badge">${p.no}</div>
+            <div class="prompt-title-wrap">
+              <h3>${escapeHtml(p.judul)}</h3>
+              <p>${escapeHtml(p.use)}</p>
+            </div>
+          </div>
+          <div class="prompt-actions-right">
+            <span class="badge badge-gold">${p.katlabel || p.kat}</span>
+            <button class="fav-btn ${isFav ? 'active' : ''}" title="Simpan ke Favorit" onclick="toggleFavorite('${p.no}', event)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <div class="expand-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-body">
+          ${p.brief ? `<div class="prompt-brief-box"><b>Kapan dipakai:</b> ${escapeHtml(p.brief)}</div>` : ''}
+          <div class="prompt-code-wrap">
+            <pre class="prompt-code">${escapeHtml(fullText)}</pre>
+          </div>
+          <div class="prompt-footer">
+            <div class="prompt-tip">
+              <b>${escapeHtml(p.tipTitle || 'Catatan Penting')}:</b> ${escapeHtml(p.tip || '')}
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-sm btn-gold-outline" onclick="openPromptFillModal('${p.no}')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                Isi & Sesuaikan
+              </button>
+              <button class="btn btn-sm btn-gold" onclick="copyPromptLines('${p.no}', this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Salin Prompt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function togglePromptCard(promptNo) {
+  const card = document.getElementById(`card-${promptNo}`);
+  if (card) {
+    card.classList.toggle('expanded');
+  }
+}
+
+function toggleFavorite(promptNo, event) {
+  if (event) event.stopPropagation();
+  const idx = STATE.favorites.indexOf(promptNo);
+  if (idx > -1) {
+    STATE.favorites.splice(idx, 1);
+    showToast(`Prompt ${promptNo} dihapus dari Favorit`);
+  } else {
+    STATE.favorites.push(promptNo);
+    showToast(`Prompt ${promptNo} ditambahkan ke Favorit ⭐`, 'success');
+  }
+  localStorage.setItem('humas_pandu_favs', JSON.stringify(STATE.favorites));
+  renderCategoryTabs();
+  renderPromptsList();
+}
+
+function renderRambuCards() {
+  const container = document.getElementById('rambuGridList');
+  if (!container) return;
+
+  container.innerHTML = DATA.rambu.map((r, i) => `
+    <div class="rambu-card">
+      <div class="rambu-num">0${i + 1}</div>
+      <div class="rambu-info">
+        <h4>${escapeHtml(r.judul)}</h4>
+        <p>${escapeHtml(r.desc)}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderFunnelAndKits() {
+  // Funnel
+  const funnelContainer = document.getElementById('funnelGridList');
+  if (funnelContainer) {
+    funnelContainer.innerHTML = DATA.funnel.map(f => `
+      <div class="funnel-card">
+        <div class="funnel-lvl-tag">${f.lvl} · ${escapeHtml(f.nama)}</div>
+        <h3>${escapeHtml(f.nama)}</h3>
+        <p class="funnel-goal">${escapeHtml(f.goal)}</p>
+        <div class="funnel-fmt"><b>Format:</b> ${escapeHtml(f.fmt)}</div>
+        <div class="funnel-exm"><b>Contoh Topik:</b> "${escapeHtml(f.exm)}"</div>
+      </div>
+    `).join('');
+  }
+
+  // Kit
+  const kitContainer = document.getElementById('kitGridList');
+  if (kitContainer) {
+    kitContainer.innerHTML = DATA.kit.map((k, i) => `
+      <div class="kit-card">
+        <h4><span>${escapeHtml(k.nama)}</span> <span class="badge badge-gold">Template 0${i + 1}</span></h4>
+        <p>${escapeHtml(k.desc)}</p>
+      </div>
+    `).join('');
+  }
+
+  // Metriks
+  const metrikContainer = document.getElementById('metrikGridList');
+  if (metrikContainer) {
+    metrikContainer.innerHTML = DATA.metrik.map(m => `
+      <div class="metrik-card">
+        <div class="metrik-name">${escapeHtml(m.nama)}</div>
+        <div class="metrik-how">${escapeHtml(m.how)}</div>
+        <div class="metrik-tgt"><b>Evaluasi:</b> ${escapeHtml(m.tgt)}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function renderPlanChecklist() {
+  const container = document.getElementById('planChecklistContainer');
+  if (!container) return;
+
+  container.innerHTML = DATA.rencana.map((item, idx) => {
+    const isCompleted = !!STATE.checkedTasks[idx];
+    return `
+      <div class="check-task-card ${isCompleted ? 'completed' : ''}" data-idx="${idx}" onclick="toggleTaskCheck(${idx})">
+        <div class="custom-checkbox">${isCompleted ? '✓' : ''}</div>
+        <div class="task-info">
+          <div class="task-day">${item.hari}</div>
+          <div class="task-title">${escapeHtml(item.tugas)}</div>
+          <div class="task-deliverable"><b>Target Hasil:</b> ${escapeHtml(item.hasil)}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleTaskCheck(idx) {
+  if (STATE.checkedTasks[idx]) {
+    delete STATE.checkedTasks[idx];
+  } else {
+    STATE.checkedTasks[idx] = true;
+    showToast(`Target ${DATA.rencana[idx].hari} diselesaikan! 🎉`, 'success');
+  }
+  localStorage.setItem('humas_pandu_tasks', JSON.stringify(STATE.checkedTasks));
+  renderPlanChecklist();
+  updateProgressDisplays();
+}
+
+function updateProgressDisplays() {
+  const total = DATA.rencana.length;
+  let count = 0;
+  for (let i = 0; i < total; i++) {
+    if (STATE.checkedTasks[i]) count++;
+  }
+  const pct = Math.round((count / total) * 100);
+
+  // Update Plan View
+  const countEl = document.getElementById('planProgressCount');
+  const barEl = document.getElementById('planProgressBar');
+  if (countEl) countEl.textContent = `${count} dari ${total} Selesai (${pct}%)`;
+  if (barEl) barEl.style.width = `${pct}%`;
+
+  // Update Home Stat
+  const homeStatEl = document.getElementById('homeProgressTxt');
+  if (homeStatEl) homeStatEl.textContent = `${count} / ${total}`;
+}
+
+/* ==========================================================================
+   INTERACTIVE MODAL: ISI & SESUAIKAN PROMPT
+   ========================================================================== */
+let activeModalPrompt = null;
+
+function openPromptFillModal(promptNo) {
+  const p = DATA.prompts.find(item => item.no === promptNo);
+  if (!p) return;
+  activeModalPrompt = p;
+
+  const titleEl = document.getElementById('modalPromptTitle');
+  const bodyEl = document.getElementById('modalPromptBody');
+
+  titleEl.innerHTML = `<span class="badge badge-gold">${p.no}</span> ${escapeHtml(p.judul)}`;
+
+  // Find placeholders like [TEMPEL JUDUL], [TEMPEL ISI RILIS LENGKAP], [ISI], etc.
+  const rawText = p.lines.join('\n');
+  const placeholderRegex = /\[([^\]]+)\]/g;
+  const matches = [];
+  let m;
+  while ((m = placeholderRegex.exec(rawText)) !== null) {
+    if (!matches.includes(m[1])) matches.push(m[1]);
+  }
+
+  let formHtml = `
+    <p style="font-size:0.86rem; color:var(--txt-muted); margin-bottom:18px;">
+      Isi data di bawah ini untuk mengisi variabel di dalam prompt <b>${p.no}</b>. Teks hasil akan langsung siap disalin ke ChatGPT/Gemini/Claude.
+    </p>
+  `;
+
+  if (matches.length > 0) {
+    matches.forEach((ph, idx) => {
+      const isLong = ph.toLowerCase().includes('isi') || ph.toLowerCase().includes('rilis') || ph.toLowerCase().includes('materi') || ph.toLowerCase().includes('komentar') || ph.toLowerCase().includes('pertanyaan');
+      formHtml += `
+        <div class="form-group">
+          <label class="form-label">${escapeHtml(ph)}</label>
+          ${isLong ? `
+            <textarea class="form-textarea ph-input" data-tag="${escapeHtml(ph)}" placeholder="Masukkan ${escapeHtml(ph)} di sini..."></textarea>
+          ` : `
+            <input type="text" class="form-control ph-input" data-tag="${escapeHtml(ph)}" placeholder="Masukkan ${escapeHtml(ph)} di sini...">
+          `}
+        </div>
+      `;
+    });
+  } else {
+    formHtml += `
+      <div class="form-group">
+        <label class="form-label">Konteks Tambahan / Instruksi Khusus</label>
+        <textarea class="form-textarea ph-input" data-tag="KONTEKS_TAMBAHAN" placeholder="Tuliskan data tambahan bila ada..."></textarea>
+      </div>
+    `;
+  }
+
+  // Live preview box
+  formHtml += `
+    <div style="margin-top:20px;">
+      <label class="form-label">Pratinjau Prompt Siap Pakai</label>
+      <pre class="prompt-code" id="modalPreviewBox" style="max-height:220px;">${escapeHtml(rawText)}</pre>
+    </div>
+  `;
+
+  bodyEl.innerHTML = formHtml;
+
+  // Bind live updates
+  bodyEl.querySelectorAll('.ph-input').forEach(input => {
+    input.addEventListener('input', updateModalPreview);
+  });
+
+  document.getElementById('promptFillModal').classList.add('active');
+}
+
+function updateModalPreview() {
+  if (!activeModalPrompt) return;
+  let text = activeModalPrompt.lines.join('\n');
+
+  document.querySelectorAll('.ph-input').forEach(input => {
+    const tag = input.dataset.tag;
+    const val = input.value.trim() || `[${tag}]`;
+    const regex = new RegExp('\\[' + escapeRegExp(tag) + '\\]', 'g');
+    text = text.replace(regex, val);
+  });
+
+  const previewBox = document.getElementById('modalPreviewBox');
+  if (previewBox) previewBox.textContent = text;
+}
+
+function closePromptModal() {
+  document.getElementById('promptFillModal').classList.remove('active');
+  activeModalPrompt = null;
+}
+
+/* ==========================================================================
+   STUDIO REPURPOSING (P09 MAGIC TRICK GENERATOR)
+   ========================================================================== */
+function initStudioRepurposing() {
+  const btn = document.getElementById('btnGenerateStudio');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const judul = document.getElementById('studioJudul').value.trim() || '[JUDUL RILIS]';
+    const isi = document.getElementById('studioIsi').value.trim() || '[ISI RILIS BERITA LENGKAP]';
+    const tgl = document.getElementById('studioTanggal').value.trim() || '[TANGGAL & LOKASI]';
+    const kanal = document.getElementById('studioKanal').value.trim() || '[KANAL RESMI & NARAHUBUNG]';
+    const audiens = document.getElementById('studioAudiens').value;
+
+    const formats = [];
+    if (document.getElementById('chkReels').checked) formats.push("1) SCRIPT REELS VERTICAL 45 DETIK: HOOK (0-3d), CREDIBILITY (3-12d), PROBLEM-SOLUTION (12-35d), CALL TO ACTION (35-45d), dilengkapi arahan teks di layar.");
+    if (document.getElementById('chkX').checked) formats.push("2) UTAS TWITTER/X 3 CUITAN: Maksimal 240 karakter per cuitan, bernomor 1/3, 2/3, 3/3, memuat kanal resmi di cuitan terakhir.");
+    if (document.getElementById('chkCarousel').checked) formats.push("3) BRIEF INFOGRAFIS CAROUSEL 4 SLIDE: Cover pemantik, masalah, alur solusi, dan slide rangkuman yang layak disimpan.");
+    if (document.getElementById('chkFb').checked) formats.push("4) CAPTION FACEBOOK EDUKATIF: Gaya bercerita ramah, 3 paragraf pendek, maksimal 120 kata.");
+    if (document.getElementById('chkWa').checked) formats.push("5) SIARAN RESMI WHATSAPP: Maksimal 600 karakter, format penomoran ringkas, tanpa tautan pendek.");
+
+    const promptText = `PERAN
+Kamu adalah Tim Produksi Konten Terpadu Humas Kanwil Kementerian Haji dan Umrah Provinsi Sumatera Barat: penulis caption, kreator video vertikal, perancang infografis, dan petugas layanan informasi publik.
+
+TUGAS
+Dari SATU rilis berita resmi pada bagian KONTEKS, hasilkan paket konten turunan:
+${formats.join('\n')}
+
+KONTEKS RESMI
+Judul Rilis: ${judul}
+Isi Rilis Berita:
+${isi}
+Waktu & Lokasi: ${tgl}
+Kanal Resmi / Kontak: ${kanal}
+Target Audiens Utama: ${audiens}
+
+DAYA BAHASA
+Sopan, melayani, empati, hangat, ringkas. Nada konsisten di seluruh kanal. 
+DILARANG keras istilah birokrasi klise: optimalisasi, sinergi, transformasi, implementasi, stakeholder.
+
+ATURAN WAJIB & PENGAMAN
+Jangan mengarang angka kuota, biaya, tanggal pelunasan, atau nama pejabat. Semua data hanya boleh bersumber dari KONTEKS di atas.
+Jika ada rincian yang belum saya sediakan, tulis [NANTI DIISI] dan tanyakan kepada saya.
+
+OUTPUT
+Sajikan dalam blok teks siap salin untuk setiap platform, ditutup tabel ringkas waktu tayang terbaik.`;
+
+    document.getElementById('studioOutputText').textContent = promptText;
+    showToast("Prompt terintegrasi berhasil disusun!", "success");
+  });
+
+  document.getElementById('btnCopyStudioOutput').addEventListener('click', function() {
+    const text = document.getElementById('studioOutputText').textContent;
+    copyText(text, this);
+  });
+}
+
+/* ==========================================================================
+   RAMBU & SCANNER KEAMANAN KONTEN
+   ========================================================================== */
+function initScanner() {
+  const btn = document.getElementById('btnScanDraft');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const text = document.getElementById('draftScanInput').value.trim();
+    const resultBox = document.getElementById('scannerResultsBox');
+    if (!text) {
+      showToast("Tempelkan draf teks terlebih dahulu untuk dipindai.");
+      return;
+    }
+
+    const threats = [];
+
+    // 1. Kata Birokratis Tabu
+    const tabuWords = ['optimalisasi', 'sinergi', 'implementasi', 'stakeholder', 'transformasi', 'spektakuler', 'luar biasa', 'terbaik'];
+    const foundTabu = tabuWords.filter(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+    if (foundTabu.length > 0) {
+      threats.push({
+        type: 'warning',
+        title: 'Istilah Birokrasi / Hiperbolis Terdeteksi',
+        desc: `Ditemukan kata: <b>${foundTabu.join(', ')}</b>. Sesuai formula PANDU, ganti dengan bahasa yang lebih melayani, lugas, dan membumi.`
+      });
+    }
+
+    // 2. Janji Layanan Berbahaya
+    const promiseWords = ['gratis', 'tanpa antre', 'dipermudah', 'pasti berangkat', 'dijamin', 'dipercepat'];
+    const foundPromises = promiseWords.filter(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+    if (foundPromises.length > 0) {
+      threats.push({
+        type: 'danger',
+        title: 'Klaim / Janji Layanan Berisiko Tinggi',
+        desc: `Ditemukan janji: <b>${foundPromises.join(', ')}</b>. Pastikan klaim ini tercantum resmi di SK/Rilis. Jangan memberi janji yang tidak bisa dipertanggungjawabkan di loket layanan.`
+      });
+    }
+
+    // 3. Kebocoran Data Pribadi (16 digit angka mirip NIK atau nomor rekening panjang)
+    const nikPattern = /\b\d{16}\b/g;
+    if (nikPattern.test(text)) {
+      threats.push({
+        type: 'danger',
+        title: 'Potensi Kebocoran NIK / Rekening Jemaah',
+        desc: `Terdeteksi rangkaian 16 digit angka. NIK dan nomor rekening calon jemaah adalah data pribadi yang dilindungi hukum. Hapus atau sensor segera!`
+      });
+    }
+
+    // 4. Nomor Kontak WhatsApp Pribadi
+    const waPattern = /\b(08\d{8,12}|628\d{8,12})\b/g;
+    if (waPattern.test(text)) {
+      threats.push({
+        type: 'warning',
+        title: 'Nomor Telepon Terdeteksi',
+        desc: `Pastikan nomor telepon yang tercantum adalah kanal resmi/helpdesk Kanwil, bukan kontak pribadi petugas.`
+      });
+    }
+
+    // 5. Cek jika aman
+    resultBox.classList.add('active');
+    if (threats.length === 0) {
+      resultBox.innerHTML = `
+        <div class="threat-item safe">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <b>Draf Lolos Uji Awal!</b> Teks bebas dari istilah birokrasi klise, janji berlebihan, dan kebocoran data pribadi yang terdeteksi. Tetap lakukan verifikasi manual terhadap tanggal dan angka kuota ke bidang terkait.
+          </div>
+        </div>
+      `;
+      showToast("Draf konten lolos uji keamanan!", "success");
+    } else {
+      resultBox.innerHTML = `
+        <div style="font-weight:700; color:#FFF; margin-bottom:10px; font-size:0.95rem;">
+          Hasil Pemindaian Keamanan (${threats.length} catatan):
+        </div>
+        ${threats.map(t => `
+          <div class="threat-item ${t.type}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              ${t.type === 'danger' ? '<polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>' : '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>'}
+            </svg>
+            <div>
+              <b style="display:block; margin-bottom:2px;">${t.title}</b>
+              <span>${t.desc}</span>
+            </div>
+          </div>
+        `).join('')}
+      `;
+      showToast(`Ditemukan ${threats.length} catatan rambu pada draf!`);
+    }
+  });
+}
+
+/* ==========================================================================
+   EVENT LISTENERS & UTILITIES
+   ========================================================================== */
+function initEventListeners() {
+  // Navigation Links
+  document.querySelectorAll('#desktopNav .nav-item, .mobile-bottom-nav .mobile-nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const view = btn.dataset.view;
+      if (view) switchView(view);
+    });
+  });
+
+  // Prompt Search
+  const searchInput = document.getElementById('promptSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      STATE.searchQuery = e.target.value;
+      renderPromptsList();
+    });
+  }
+
+  // Toggle All Prompts
+  const toggleAllBtn = document.getElementById('btnToggleAllPrompts');
+  if (toggleAllBtn) {
+    let allOpen = false;
+    toggleAllBtn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      document.querySelectorAll('.prompt-card').forEach(card => {
+        card.classList.toggle('expanded', allOpen);
+      });
+      toggleAllBtn.textContent = allOpen ? 'Tutup Semua' : 'Buka Semua';
+    });
+  }
+
+  // Header "Salin Semua" Button
+  const btnSalinSemua = document.getElementById('btnSalinSemua');
+  if (btnSalinSemua) {
+    btnSalinSemua.addEventListener('click', function() {
+      let t = '═══════════════════════════════════════════════════════════\n';
+      t += 'SUITE PROMPT PANDU — HUMAS KANWIL KEMENHAJ SUMATERA BARAT\n';
+      t += 'Birokrasi Rasa Agensi\n';
+      t += '═══════════════════════════════════════════════════════════\n\n';
+
+      DATA.prompts.forEach((p, i) => {
+        t += `[${p.no}] ${p.judul} (${p.katlabel || p.kat})\n`;
+        t += `Kapan dipakai: ${p.brief || p.use}\n`;
+        t += '───────────────────────────────────────────────────────────\n';
+        t += p.lines.join('\n') + '\n\n';
+      });
+
+      t += 'KALIMAT REM WAJIB:\n';
+      t += '"Jangan mengarang. Jika data tidak saya berikan, tulis [NANTI DIISI] dan tanyakan kepada saya."\n';
+
+      copyText(t, this);
+    });
+  }
+
+  // Header "Cetak PDF" Button
+  const btnCetak = document.getElementById('btnCetakPDF');
+  if (btnCetak) {
+    btnCetak.addEventListener('click', () => {
+      // Expand all prompts for printing
+      document.querySelectorAll('.prompt-card').forEach(card => card.classList.add('expanded'));
+      setTimeout(() => { window.print(); }, 200);
+    });
+  }
+
+  // Reset Plan Button
+  const resetBtn = document.getElementById('btnResetPlan');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Apakah Anda yakin ingin mereset seluruh centang progres 7 hari?')) {
+        STATE.checkedTasks = {};
+        localStorage.removeItem('humas_pandu_tasks');
+        renderPlanChecklist();
+        updateProgressDisplays();
+        showToast('Progres 7 hari telah direset.');
+      }
+    });
+  }
+
+  // Modal Copy Filled Button
+  const btnModalCopy = document.getElementById('btnModalCopyFilled');
+  if (btnModalCopy) {
+    btnModalCopy.addEventListener('click', function() {
+      const previewBox = document.getElementById('modalPreviewBox');
+      if (previewBox) {
+        copyText(previewBox.textContent, this);
+        setTimeout(closePromptModal, 800);
+      }
+    });
+  }
+
+  initStudioRepurposing();
+  initScanner();
+}
+
+function copyPromptLines(promptNo, btn) {
+  const p = DATA.prompts.find(item => item.no === promptNo);
+  if (!p) return;
+  copyText(p.lines.join('\n'), btn);
+}
+
+function copyText(str, btn) {
+  function success() {
+    showToast("Tersalin ke clipboard! ✓", "success");
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `<span style="color:#FFF;">Tersalin ✓</span>`;
+      setTimeout(() => { btn.innerHTML = orig; }, 1800);
+    }
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(str).then(success).catch(fallback);
+  } else {
+    fallback();
+  }
+
+  function fallback() {
+    const ta = document.createElement('textarea');
+    ta.value = str;
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.style.left = '0';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      success();
+    } catch (err) {
+      showToast('Gagal menyalin otomatis. Silakan salin manual.');
+    }
+    document.body.removeChild(ta);
+  }
+}
+
+function showToast(msg, type = 'info') {
+  const container = document.getElementById('toastContainer');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type === 'success' ? 'toast-success' : ''}`;
+  toast.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      ${type === 'success' ? '<polyline points="20 6 9 17 4 12"/>' : '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'}
+    </svg>
+    <span>${escapeHtml(msg)}</span>
+  `;
+
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+    toast.style.transition = 'all 0.25s ease';
+    setTimeout(() => { toast.remove(); }, 250);
+  }, 2600);
+}
+
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+</script>
+</body>
+</html>
